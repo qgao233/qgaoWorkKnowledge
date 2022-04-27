@@ -2,8 +2,6 @@
 
 ## 1 maven
 
-2022-4-20 9:57:7
-
 ### 1.1 生命周期
 
 **1 compile**
@@ -60,5 +58,3 @@ maven的具体版本只依赖于当前项目中(.mvn/wrapper/maven-wrapper.prope
 在项目目录下，使用mvnw代替以前的mvn命令。
 
 mvnw会在每次执行命令时检测${home}/.m2/wrapper/dists目录下是否有maven-wrapper.properties中指定Maven版本，如果没有就将maven环境自动下载到dists目录。
-
->maven的配置文件settings.xml必须在{user}/.m2目录下
