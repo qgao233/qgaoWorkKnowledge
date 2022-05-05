@@ -11,3 +11,4 @@
 * [第4周]()
   * [java里执行第三方脚本](4week/5_3/index.md)
   * [spring batch](4week/5_4/index.md)
+  * [spring中单例bean引用原型bean](4week/5_5/index.md)
