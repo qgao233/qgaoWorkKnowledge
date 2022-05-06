@@ -300,13 +300,13 @@ Path path = Paths.get("/home/jakobjenkov/myfile.txt");
 
 ### 3.2 api
 
-**Paths**
+#### 3.2.1 Paths
 
 方法|解释
 :-|:-
 Path get(String,...)|获得Path对象
 
-**Path**
+#### 3.2.2 Path
 
 方法|解释
 :-|:-
@@ -323,9 +323,9 @@ Path toAbsolute Path()|作为绝对路径返回调用 Path 对象
 Path resolve(Path p)|合并两个路径，返回合并后的路径对应的Path对象
 File toFile()|将Path转化为File类的对象
 
-**Files**
+#### 3.2.3 Files
 
-用于操作文件或目录
+**1 用于操作文件或目录**
 
 方法|解释
 :-|:-
@@ -337,7 +337,7 @@ void deletelfExists (Path path)|Path对应的文件/目录如果存在，执行�
 Path move(Path src. Path dest. CopyOption...how)|将src移动到dest 位置
 long size(Path path)|返回 path 指定文件的大小
 
-用于判断
+**2 用于判断**
 
 方法|解释
 :-|:-
@@ -349,7 +349,7 @@ boolean isReadable(Path path)|判断文件是否可读
 boolean isWritable(Path path)|判断文件是否可写
 boolean notExists(Path path. LinkOptionu opts)|判断文件是否不存在
 
-用于操作内容
+**3 用于操作内容**
 
 方法|解释
 :-|:-
@@ -357,6 +357,43 @@ SeekableByteChannel newByte Channel(Path path OpenOption...how)|获取与指定�
 DirectoryStream<Path> newDirectoryStream(Path path) |打开path指定的目录
 InputStream newlnputStream(Path path. OpenOption ... how)|获取InputStream对象
 OutputStream newOutputStream(Path path, OpenOption ... how) |获取OutputStream对象
+
+**4 其它**
+
+`Files.lines()`
+
+以Stream流的形式读取文件的所有行
+
+```
+/**
+ * 以流的形式读取文件的所有行
+ * 读取的的字节是以UTF-8解码的字符集
+ * 
+ * @param path 文件的路径
+ * @return Stream<String> 文件中的行组成的流
+ * @throws IOException 出现IO错误时抛出该异常
+ * @throws SecurityException 如果是默认提供程序,则安全管理器是已安装,检查读取方法来检查对文件的读取访问
+ */
+public static Stream<String> lines(Path path) throws IOException {}
+
+/**
+ * 以流的形式读取文件的所有行
+ * 该方法和readAllLines不同,不会将所有行读取到一个List中,而是以流的形式进行惰性加载
+ * 以指定的解码的字符集读取字节,支持readAllLines的行终止符
+ * 当该方法返回时,后续读取文件发生的IOException将会在读取Stream流的方法处抛出一个包装的UncheckedIOException.
+ * 如果关闭文件发生IOException也会包装成为一个UncheckedIOException
+ * 返回的流封装了一个读取器,如果需要周期性的读取文件，需要使用try-with-resources语句来保证stream的close方法被调用,从而关闭打开的文件 
+ * 
+ * @param path 文件的路径
+ * @param cs 指定的解码格式
+ * @return Stream<String> 文件中的行组成的流
+ * @throws IOException 出现IO错误时抛出该异常
+ * @throws SecurityException 如果是默认提供程序,则安全管理器是已安装,检查读取方法来检查对文件的读取访问
+ */
+public static Stream<String> lines(Path path, Charset cs) throws IOException {}
+```
+
+
 
 ### 3.3 NIO和IO遍历指定目录效果对比
 

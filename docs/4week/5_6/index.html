@@ -1,0 +1,812 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spring Batch -- FlatFileItemReader · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../5_5/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第2周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../2week/4_19/">
+            
+                <a href="../../2week/4_19/">
+            
+                    
+                    测试与nio的Path,File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../2week/4_20/">
+            
+                <a href="../../2week/4_20/">
+            
+                    
+                    maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../2week/4_22/">
+            
+                <a href="../../2week/4_22/">
+            
+                    
+                    idea的git标签中的符号含义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    第3周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../3week/4_27/">
+            
+                <a href="../../3week/4_27/">
+            
+                    
+                    linux -- less
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第4周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../5_3/">
+            
+                <a href="../5_3/">
+            
+                    
+                    java里执行第三方脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../5_4/">
+            
+                <a href="../5_4/">
+            
+                    
+                    spring batch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../5_5/">
+            
+                <a href="../5_5/">
+            
+                    
+                    spring中单例bean引用原型bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Spring Batch -- FlatFileItemReader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Spring Batch -- FlatFileItemReader</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; qgao 2021-* all right reserved, powered by <a href="https://github.com/aleen42" target="_blank">aleen42</a></span></div><ul>
+<li><div><a href="#1-spring-batch----flatfileitemreader">1 Spring Batch -- FlatFileItemReader</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#11-property&#x8BE5;&#x7C7B;&#x7684;&#x5B57;&#x6BB5;">1.1 property/&#x8BE5;&#x7C7B;&#x7684;&#x5B57;&#x6BB5;</a><i></i></div></li>
+<li><div><a href="#12-&#x5B57;&#x6BB5;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x63A5;&#x53E3;">1.2 &#x5B57;&#x6BB5;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;/&#x63A5;&#x53E3;</a><i></i></div></li>
+<li><div><a href="#13-&#x5404;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;">1.3 &#x5404;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#131-recordseparatorpolicy">1.3.1 RecordSeparatorPolicy</a><i></i></div></li>
+<li><div><a href="#132-linemapper">1.3.2 LineMapper</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#14-linemapper&#x4E4B;defaultlinemapper&#x8BE6;&#x89E3;">1.4 LineMapper&#x4E4B;DefaultLineMapper&#x8BE6;&#x89E3;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#141-linetokenizer">1.4.1 LineTokenizer</a><i></i></div></li>
+<li><div><a href="#142-fieldsetmapper">1.4.2 FieldSetMapper</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#15-linecallbackhandler">1.5 LineCallbackHandler</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#151-&#x81EA;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;linecallbackhandler">1.5.1 &#x81EA;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;LineCallbackHandler</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="&#x7B2C;4&#x5468;-56">&#x7B2C;4&#x5468;-5.6</h1>
+<h2 id="1-spring-batch----flatfileitemreader">1 Spring Batch -- FlatFileItemReader</h2>
+<p><a href="https://blog.csdn.net/qq_21370419/article/details/122970144" target="_blank">Spring Batch&#x4E4B;&#x8BFB;&#x6570;&#x636E;&#x2014;FlatFileItemReader&#xFF08;&#x4E8C;&#x5341;&#x4E94;&#xFF09;</a></p>
+<p>&#x5B9E;&#x73B0;ItemReader&#x63A5;&#x53E3;&#xFF0C;&#x6838;&#x5FC3;&#x4F5C;&#x7528;&#x5C06;<strong>Flat&#x6587;&#x4EF6;</strong>&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;Java&#x5BF9;&#x8C61;&#x3002;</p>
+<blockquote>
+<p>Flat File: &#x662F;&#x4E00;&#x79CD;&#x5305;&#x542B;&#x6CA1;&#x6709;&#x76F8;&#x5BF9;&#x5173;&#x7CFB;&#x7ED3;&#x6784;&#x7684;&#x8BB0;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;&#x4E0D;&#x50CF;&#x8868;&#x90A3;&#x6837;&#x6709;&#x7ED3;&#x6784;&#xFF0C;&#x800C;&#x662F;&#x6587;&#x672C;&#x6587;&#x6863;&#x4E00;&#x6837;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<h3 id="11-property&#x8BE5;&#x7C7B;&#x7684;&#x5B57;&#x6BB5;">1.1 property/&#x8BE5;&#x7C7B;&#x7684;&#x5B57;&#x6BB5;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5C5E;&#x6027;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bufferedReaderFactory</td>
+<td style="text-align:left">BufferedReaderFactory</td>
+<td style="text-align:left">&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;resource&#x521B;&#x5EFA;BufferReader&#x5B9E;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;DefaultBufferedReaderFactory&#x521B;&#x5EFA;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x7684;BufferReader&#x5B9E;&#x4F8B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">comments</td>
+<td style="text-align:left">String[]</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x6CE8;&#x91CA;&#x884C;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x5F53;&#x67D0;&#x884C;&#x4EE5;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x5934;&#x65F6;&#x5019;&#xFF0C;&#x6B64;&#x884C;&#x8BB0;&#x5F55;&#x5C06;&#x4F1A;&#x88AB;Spring Batch&#x6846;&#x67B6;&#x5FFD;&#x7565;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">encoding</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x4ECE;&#x73AF;&#x5883;&#x53D8;&#x91CF;file.encoding&#x83B7;&#x53D6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;UTF-8</td>
+</tr>
+<tr>
+<td style="text-align:left">lineMapper</td>
+<td style="text-align:left"><code>LineMapper&lt;T&gt;</code></td>
+<td style="text-align:left">&#x5C06;&#x4E00;&#x884C;&#x6587;&#x4EF6;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;Java&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td style="text-align:left">linesToSkip</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B9A;&#x4E49;&#x8DF3;&#x8FC7;&#x6587;&#x4EF6;&#x7684;&#x884C;&#x6570;&#xFF1B;&#x8DF3;&#x8FC7;&#x7684;&#x884C;&#x8BB0;&#x5F55;&#x5C06;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x7ED9;skippedLinesCallback&#xFF0C;&#x6267;&#x884C;&#x8DF3;&#x8FC7;&#x884C;&#x7684;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td style="text-align:left">recordSeparatorPolicy</td>
+<td style="text-align:left">RecordSeparatorPolicy</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x5982;&#x4F55;&#x533A;&#x5206;&#x8BB0;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5355;&#x884C;&#x3001;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x591A;&#x884C;&#x533A;&#x5206;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">resource</td>
+<td style="text-align:left">Resource</td>
+<td style="text-align:left">&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">skippedLinesCallback</td>
+<td style="text-align:left">LineCallbackHandler</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x4E2D;&#x8BB0;&#x5F55;&#x8DF3;&#x8FC7;&#x65F6;&#x6267;&#x884C;&#x7684;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;&#xFF0C;&#x901A;&#x5E38;&#x4E0E;linesToSkip&#x4E00;&#x8D77;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td style="text-align:left">strict</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x5019;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x5982;&#x679C;&#x4E3A;true&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF1B;&#x5982;&#x679C;&#x4E3A;false&#x8868;&#x793A;&#x4E0D;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-&#x5B57;&#x6BB5;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x63A5;&#x53E3;">1.2 &#x5B57;&#x6BB5;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;/&#x63A5;&#x53E3;</h3>
+<p><img src="media/1.png" alt=""></p>
+<div style="font-weight:bold;color:red;">&#x7EA2;&#x8272;&#x90E8;&#x5206;&#xFF1A;</div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5173;&#x952E;&#x7C7B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Resource</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td style="text-align:left">RecordSeparatorPolicy</td>
+<td style="text-align:left">&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x786E;&#x5B9A;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x8BB0;&#x5F55;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x884C;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x8DE8;&#x591A;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">LineMapper</td>
+<td style="text-align:left">&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x5316;&#x4E3A;Java&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x5E38;&#x7531;LineTokenizer&#x548C;FieldSetMapper&#x7EC4;&#x5408;&#x6765;&#x5B9E;&#x73B0;&#x8BE5;&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td style="text-align:left">LineTokenizer</td>
+<td style="text-align:left">&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5206;&#x5272;&#x4E3A;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x5728;LineMapper&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;DefaultLineMapper&#x4E2D;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td style="text-align:left">FieldSetMapper</td>
+<td style="text-align:left">&#x5C06;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x503C;&#x8F6C;&#x5316;&#x4E3A;Java&#x5BF9;&#x8C61;&#xFF0C;&#x5728;LIneMapper&#x7684;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;DefaultLineMapper&#x4E2D;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td style="text-align:left">LineCallbackHandler</td>
+<td style="text-align:left">&#x5904;&#x7406;&#x6587;&#x4EF6;&#x4E2D;&#x8BB0;&#x5F55;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x64CD;&#x4F5C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-&#x5404;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;">1.3 &#x5404;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</h3>
+<h4 id="131-recordseparatorpolicy">1.3.1 RecordSeparatorPolicy</h4>
+<pre><code>//org.springframework.batch.item.file.separator.RecordSeparatorPolicy
+
+public interface RecordSeparatorPolicy {
+    //&#x64CD;&#x4F5C;&#x5B9A;&#x4E49;&#x8BB0;&#x5F55;&#x662F;&#x5426;&#x7ED3;&#x675F;
+    boolean isEndOfRecord(String var1);
+    //&#x64CD;&#x4F5C;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x884C;&#x52A0;&#x5165;&#x5230;&#x8BB0;&#x5F55;&#x524D;&#x89E6;&#x53D1;
+    String postProcess(String var1);
+    //&#x64CD;&#x4F5C;&#x5728;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x8BB0;&#x5F55;&#x8FD4;&#x56DE;&#x524D;&#x89E6;&#x53D1;
+    String preProcess(String var1);
+}
+</code></pre><blockquote>
+<p>FlatFileItemReader&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;SimpleRecordSeparatorPolicy&#x4F5C;&#x4E3A;&#x8BB0;&#x5F55;&#x5206;&#x5272;&#x7B56;&#x7565;&#xFF0C;&#x5373;&#x6BCF;&#x4E00;&#x884C;&#x4F5C;&#x4E3A;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
+</blockquote>
+<h4 id="132-linemapper">1.3.2 LineMapper</h4>
+<pre><code>//org.springframework.batch.item.file.mapping.LineMapper
+
+public interface LineMapper&lt;T&gt; {
+    //&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;&#x884C;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x884C;&#x53F7;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x9886;&#x57DF;&#x5BF9;&#x8C61;(&#x901A;&#x5E38;&#x4E3A;Java&#x5BF9;&#x8C61;)&#x3002;
+    T mapLine(String var1, int var2) throws Exception;
+}
+</code></pre><p>4&#x4E2A;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">LineMapper</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1 <code>DefaultLineMapper&lt;T&gt;</code></td>
+<td style="text-align:left">&#x9ED8;&#x8BA4;&#x7684;&#x884C;&#x8F6C;&#x6362;&#x7C7B;&#xFF0C;&#x5F15;&#x7528;&#x63A5;&#x53E3;<code>LineToken&lt;T&gt;</code>&#x548C;<code>FieldSetMapper&lt;T&gt;</code>&#x5B8C;&#x6210;&#x6570;&#x636E;&#x8F6C;&#x6362;&#xFF1B;LineTokenizer&#x8D1F;&#x8D23;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x8C61;FieldSet(&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;key-value&#x5BF9;&#x7684;&#x7EC4;&#x5408;)&#xFF0C;<code>FieldSetMapper&lt;T&gt;</code>&#x8D1F;&#x8D23;&#x5C06;FieldSet&#x8F6C;&#x6362;&#x4E3A;&#x9886;&#x57DF;&#x5BF9;&#x8C61; <code>DefaultLineMapper&lt;T&gt;</code> </td>
+</tr>
+<tr>
+<td style="text-align:left">2 JsonLineMapper</td>
+<td style="text-align:left">&#x8D1F;&#x8D23;&#x5C06;&#x6587;&#x4EF6;&#x4E2D;JSON&#x683C;&#x5F0F;&#x7684;&#x6587;&#x672C;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#xFF0C;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x683C;&#x5F0F;&#x4E3A;<code>Map&lt;String,Object&gt; JsonLineMapper</code></td>
+</tr>
+<tr>
+<td style="text-align:left">3 PassThroughLineMapper</td>
+<td style="text-align:left">&#x6700;&#x7B80;&#x5316;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x8FD4;&#x56DE;&#x7684;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x4E3A;String&#x7C7B;&#x578B;&#x7684;&#x683C;&#x5F0F; PassThroughLineMapper</td>
+</tr>
+<tr>
+<td style="text-align:left">4 <code>PatternMatchingCompositeLineMapper&lt;T&gt;</code></td>
+<td style="text-align:left">&#x590D;&#x6742;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x8BB0;&#x5F55;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x7684;<code>LineTokenizer&#x548C;FieldSetMapper&lt;T&gt;</code>&#x6765;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x8F6C;&#x6362;&#xFF1B;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x5185;&#x5BB9;&#x6839;&#x636E;&#x8BBE;&#x7F6E;&#x7684;&#x6761;&#x4EF6;&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;<code>LineTokenizer</code>&#x548C;<code>FieldSetMapper&lt;T&gt;</code>&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8F6C;&#x6362;&#xFF1B;&#x591A;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x8BB0;&#x5F55;&#x7684;&#x573A;&#x666F;&#x3002;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;<code>PatternMatchingCompositeLineMapper&lt;T&gt;</code>&#x7EC4;&#x5408;&#x4E86;&#x591A;&#x4E2A;<code>DefaultLineMapper&lt;T&gt;</code> <code>PatternMatchingCompositeLineMapper&lt;T&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-linemapper&#x4E4B;defaultlinemapper&#x8BE6;&#x89E3;">1.4 LineMapper&#x4E4B;DefaultLineMapper&#x8BE6;&#x89E3;</h3>
+<p><code>DefaultLineMapper&lt;T&gt;</code>&#x662F;Spring Batch&#x6846;&#x67B6;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;LIneMapper&#x5B9E;&#x73B0;&#xFF0C;&#x5176;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;</p>
+<ul>
+<li>LineTokenizer: &#x8D1F;&#x8D23;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;FieldSet&#x5BF9;&#x8C61;</li>
+<li>FieldSetMapper<t>: &#x8D1F;&#x8D23;&#x5C06;FieldSet&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x9886;&#x57DF;&#x5BF9;&#x8C61;</t></li>
+</ul>
+<p>&#x5B8C;&#x6210;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x529F;&#x80FD;&#x3002;</p>
+<p>DefaultLineMapper&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x4EFB;&#x52A1;&#x59D4;&#x6258;&#x7ED9;<strong>&#x4E24;&#x4E2A;&#x63A5;&#x53E3;</strong>&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x7B80;&#x5316;&#x4E86;DefaultLineMapper&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#xFF0C;&#x540C;&#x65F6;&#x4F7F;&#x5F97;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x804C;&#x8D23;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4FDD;&#x6301;&#x4E86;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x6E05;&#x6670;&#x3002;</p>
+<p><img src="media/2.png" alt=""></p>
+<p>&#x914D;&#x7F6E;DefaultLineMapper&#x7684;&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;bean:bean id=&quot;lineMapper&quot; class=&quot;org.springframework.batch.item.file.mapping.DefaultLineMapper&quot; &gt;
+    &lt;bean:property name=&quot;lineTokenizer&quot; ref=&quot;delimitedLineTokenizer&quot; /&gt;
+    &lt;bean:property name=&quot;fieldSetMapper&quot; ref=&quot;creditBillFieldSetMapper&quot;/&gt;
+&lt;/bean:bean&gt;
+</code></pre><h4 id="141-linetokenizer">1.4.1 LineTokenizer</h4>
+<pre><code>public interface LineTokenizer {
+    //&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;&#x884C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;FieldSet&#x5BF9;&#x8C61;&#x3002;
+    //FieldSet&#x5BF9;&#x8C61;&#x4E2D;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x7EC4;key-value&#x7684;&#x7EC4;&#x5408;&#xFF0C;
+    //&#x8D1F;&#x8D23;&#x5B58;&#x653E;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x5206;&#x5272;&#x540E;&#x7684;&#x6570;&#x636E;&#x6761;&#x76EE;&#xFF0C;
+    //&#x6761;&#x76EE;&#x4EE5;key-value(key&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x5B57;&#x6BB5;&#x7684;&#x540D;&#x5B57;name)&#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x5728;&#x3002;
+    FieldSet tokenize(String var1);
+}
+</code></pre><blockquote>
+<p>FieldSet&#x63A5;&#x53E3;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x8BFB;&#x53D6;value&#x503C;&#x7684;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x53CA;&#x64CD;&#x4F5C;name&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5728;FieldSet&#x4E2D;&#x8BFB;&#x53D6;value&#x65F6;&#xFF0C;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x4E3A;&#x7C7B;&#x578B;String&#x3001;Boolean&#x3001;Char&#x3001;Byte&#x3001;Short&#x3001;Int&#x3001;Long&#x3001;Float&#x3001;Double&#x3001;BigDecimal&#x3001;Date&#x3002;</p>
+</blockquote>
+<p><strong>4&#x7C7B;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">LineTokenizer</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DelimitedLineTokenizer</td>
+<td style="text-align:left">&#x57FA;&#x4E8E;&#x5206;&#x9694;&#x7B26;&#x7684;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x5206;&#x9694;&#x7B26;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;FieldSet&#x5BF9;&#x8C61;org.springframework.batch.item.file.transform.DelimitedLineTokenizer</td>
+</tr>
+<tr>
+<td style="text-align:left">FixedLengthTokenizer</td>
+<td style="text-align:left">&#x57FA;&#x4E8E;&#x5B9A;&#x957F;&#x6570;&#x636E;&#x7684;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;FieldSet&#x5BF9;&#x8C61;org.springframework.batch.item.file.transform.FixedLengthTokenizer</td>
+</tr>
+<tr>
+<td style="text-align:left">RegexLineTokenizer</td>
+<td style="text-align:left">&#x6839;&#x636E;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6761;&#x4EF6;&#x5C06;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x8F6C;&#x6362;&#x4E3A;FieldSet&#x5BF9;&#x8C61;org.springframework.batch.item.file.transform.RegexLineTokenizer</td>
+</tr>
+<tr>
+<td style="text-align:left">PatternMatchingCompositeLineTokenizer</td>
+<td style="text-align:left">&#x53EF;&#x4EE5;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x8BB0;&#x5F55;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x7684;LineTokenizer&#xFF1B;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x6807;&#x8BC6;&#x4E0E;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x6BD4;&#x5BF9;&#xFF0C;&#x5982;&#x679C;&#x6EE1;&#x8DB3;&#x5219;&#x7528;&#x6307;&#x5B9A;&#x7684;LineTokenizer&#xFF1B;&#x591A;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x8BB0;&#x5F55;&#x7684;&#x573A;&#x573A;&#x666F;org.springframework.batch.item.file.transform.PatternMatchingCompositeLineTokenizer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1. DelimitedLineTokenizer: &#x5206;&#x9694;&#x7B26;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</strong></p>
+<p>&#x4F8B;&#xFF1A;</p>
+<p>&#x2460; &#x5F85;&#x5904;&#x7406;&#x7684;&#x4EE5;&#x201C;,&#x201D;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#x7684;&#x6587;&#x4EF6;:</p>
+<pre><code>4047390012345678,tom,100.00,2013-2-2 12:00:08,Lu Jia Zui road 4047390012345678,tom,320.00,2013-2-3 10:35:21,Lu Jia Zui road 4047390012345678,tom,674.70,2013-2-6 16:26:49,South Linyi road 4047390012345678,tom,793.20,2013-2-9 15:15:37,Longyang road 4047390012345678,tom,360.00,2013-2-11 11:12:38,Longyang road 4047390012345678,tom,893.00,2013-2-28 20:34:19,Hunan road
+</code></pre><p>&#x2461; &#x914D;&#x7F6E;&#x5206;&#x9694;&#x7B26;DelimitedLineTokenizer&#xFF1A;</p>
+<pre><code>&lt;bean:bean id=&quot;lineTokenizer&quot; class=&quot;org.springframework.batch.item.file.transform.DelimitedLineTokenizer&quot;&gt;
+    &lt;bean:property name=&quot;delimiter&quot; value=&quot;,&quot;/&gt;
+    &lt;bean:property name=&quot;names&quot;&gt;
+        &lt;bean:list&gt;
+            &lt;bean:value&gt;accountID&lt;/bean:value&gt;
+            &lt;bean:value&gt;name&lt;/bean:value&gt;
+            &lt;bean:value&gt;amount&lt;/bean:value&gt;
+            &lt;bean:value&gt;date&lt;/bean:value&gt;
+            &lt;bean:value&gt;address&lt;/bean:value&gt;
+        &lt;/bean:list&gt;
+    &lt;/bean:property&gt;
+&lt;/bean:bean&gt;
+</code></pre><ul>
+<li>delimiter&#xFF1A;&#x8868;&#x793A;&#x5206;&#x9694;&#x7B26;&#x4E3A;&#x201C;,&#x201D;&#x3002;</li>
+<li>names&#xFF1A;&#x4E3A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x540D;&#x5B57;&#xFF0C;&#x6839;&#x636E;&#x5206;&#x9694;&#x7B26;&#x201C;,&#x201D;&#x83B7;&#x53D6;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x503C;&#x5206;&#x522B;&#x5BF9;&#x5E94;names&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x3002;</li>
+</ul>
+<p><strong>2. FixedLengthTokenizer: &#x5B9A;&#x957F;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x5904;&#x7406;</strong></p>
+<p>&#x4F8B;&#xFF1A;</p>
+<p>&#x2460; &#x5982;&#x4E0B;&#x662F;&#x5B9A;&#x957F;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x884C;&#x8BB0;&#x5F55;&#x957F;&#x5EA6;&#x4E00;&#x81F4;&#xFF0C;&#x5B57;&#x6BB5;&#x95F4;&#x4E0D;&#x8DB3;&#x7684;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x8865;&#x9F50;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x4E3A;1-16&#xFF0C;17-26,27-34,35-53,54-72&#xFF1A;</p>
+<pre><code>4041390012345678tom       00100.002013-02-02 12:00:08    Lu Jia Zui road
+4042390012345678tom       00320.002013-02-03 10:35:21    Lu Jia Zui road
+4043390012345678jerry     00674.702013-02-06 16:26:49   South Linyi road
+4044390012345678rose      00793.202013-02-09 15:15:37      Longyang road
+4045390012345678bruce     00360.002013-02-11 11:12:38      Longyang road
+4046390012345678rachle    00893.002013-02-28 20:34:19         Hunan road
+</code></pre><p>&#x2461; &#x914D;&#x7F6E;&#x5B9A;&#x957F;&#x6587;&#x4EF6;FixedLengthTokenizer&#xFF1A;</p>
+<pre><code>&lt;bean:bean id=&quot;fixedLengthLineTokenizer&quot; class=&quot;org.springframework.batch.item.file.transform.FixedLengthTokenizer&quot;&gt;
+    &lt;bean:property name=&quot;columns&quot; value=&quot;1-16,17-26,27-34,35-53,54-72&quot;/&gt;
+    &lt;bean:property name=&quot;names&quot; value=&quot;accountID,name,amount,date,address&quot;/&gt; 
+&lt;/bean:bean&gt;
+</code></pre><ul>
+<li>columns&#xFF1A;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x957F;&#x5EA6;&#xFF0C;&#x5B57;&#x6BB5;&#x987A;&#x5E8F;&#x548C;names&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x5B57;&#x5339;&#x914D;&#x3002;</li>
+<li>names&#xFF1A;&#x5C5E;&#x6027;names&#x4E3A;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x540D;&#x5B57;&#x3002;</li>
+</ul>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x957F;&#x5EA6;&#x65F6;&#xFF0C;&#x4ECE;1&#x5F00;&#x59CB;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x3002;</p>
+<h4 id="142-fieldsetmapper">1.4.2 FieldSetMapper</h4>
+<pre><code>public interface FieldSetMapper&lt;T&gt; {
+    //&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;FieldSet&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x3002;
+    T mapFieldSet(FieldSet var1) throws BindException;
+}
+</code></pre><p><strong>3&#x7C7B;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FieldSetMapper</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ArrayFieldSetMapper</td>
+<td style="text-align:left">&#x5C06;FieldSet&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x4E3A;String[] org.springframework.batch.item.file.mapping.ArrayFieldSetMapper</td>
+</tr>
+<tr>
+<td style="text-align:left">BeanWrapperFieldSetMapper<t></t></td>
+<td style="text-align:left">&#x5C06;FieldSet&#x5BF9;&#x8C61;&#x6839;&#x636E;&#x540D;&#x5B57;&#x6620;&#x5C04;&#x5230;&#x7ED9;&#x5B9A;&#x7684;Bean&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8BC1;FieldSet&#x4E2D;&#x7684;name&#x548C;Bean&#x4E2D;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;. org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper<t></t></td>
+</tr>
+<tr>
+<td style="text-align:left">PassThroughFieldSetMapper</td>
+<td style="text-align:left">&#x76F4;&#x63A5;&#x8FD4;&#x56DE;FieldSet&#x5BF9;&#x8C61;. org.springframework.batch.item.file.mapping.PassThroughFieldSetMapper</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1 BeanWrapperFieldSetMapper</strong></p>
+<p>BeanWrapperFieldSetMapper&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;FieldSet&#x5BF9;&#x8C61;&#x6839;&#x636E;&#x540D;&#x5B57;&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x6210;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x58F0;&#x660E;&#x4F7F;&#x7528;BeanWrapperFieldSetMapper&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x5C5E;&#x6027;prototypeBeanName&#x4E2D;&#x6307;&#x660E;&#x9700;&#x8981;&#x6620;&#x5C04;&#x7684;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x5373;&#x53EF;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x671F;&#x81EA;&#x52A8;&#x5C06;FieldSet&#x4E2D;name&#x4E0E;&#x9886;&#x57DF;&#x5BF9;&#x8C61;&#x540C;&#x540D;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF1A;</strong></p>
+<pre><code>&lt;bean:bean id=&quot;creditBillBeanWrapperFieldSetMapper&quot; class=&quot;org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper&quot; &gt;
+    &lt;bean:property name=&quot;prototypeBeanName&quot; value=&quot;creditBill&quot; /&gt;
+&lt;/bean:bean&gt;
+&lt;bean:bean id=&quot;creditBill&quot; scope=&quot;prototype&quot; class=&quot;com.juxtapose.example.ch06.CreditBill&quot;&gt;
+&lt;/bean:bean&gt;
+</code></pre><p><strong>&#x5176;&#x4E2D;CreditBill.java&#xFF1A;</strong></p>
+<pre><code>public class CreditBill implements Serializable{
+
+   private static final long serialVersionUID = -4940717436114184875L;
+   private String accountID = &quot;&quot;; /** &#x94F6;&#x884C;&#x5361;&#x8D26;&#x6237;ID */
+   private String name = &quot;&quot;;     /** &#x6301;&#x5361;&#x4EBA;&#x59D3;&#x540D; */
+   private double amount = 0;    /** &#x6D88;&#x8D39;&#x91D1;&#x989D; */
+   private String date;         /** &#x6D88;&#x8D39;&#x65E5;&#x671F; &#xFF0C;&#x683C;&#x5F0F;YYYY-MM-DD HH:MM:SS*/
+   private String address;          /** &#x6D88;&#x8D39;&#x573A;&#x6240; **/
+}
+</code></pre><p><strong>2 &#x81EA;&#x5B9A;&#x4E49;FieldSetMapper</strong></p>
+<p>&#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;FieldSetMapper&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x8F6C;&#x6362;&#x5668;&#xFF0C;</p>
+<pre><code>public class CreditBillFieldSetMapper implements FieldSetMapper&lt;CreditBill&gt; {
+
+    public CreditBill mapFieldSet(FieldSet fieldSet) throws BindException {
+        CreditBill result = new CreditBill();
+        result.setId(fieldSet.readString(&quot;id&quot;));
+        result.setAccountID(fieldSet.readString(&quot;accountID&quot;));
+        result.setName(fieldSet.readString(&quot;name&quot;));
+        result.setAmount(fieldSet.readDouble(&quot;amount&quot;));
+        result.setDate(fieldSet.readString(&quot;date&quot;));
+        result.setAddress(fieldSet.readString(&quot;address&quot;));
+        return result;
+    }
+}
+
+//&#x914D;&#x7F6E;
+
+&lt;bean:bean id=&quot;creditBillFieldSetMapper&quot; class=&quot;com.juxtapose.example.ch06.flat.CreditBillFieldSetMapper&quot;&gt;
+&lt;/bean:bean&gt;
+</code></pre><h3 id="15-linecallbackhandler">1.5 LineCallbackHandler</h3>
+<blockquote>
+<p>&#x5728;FlatFileItemReader&#x4E2D;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;linesToSkip&#xFF0C;&#x8868;&#x793A;&#x4ECE;&#x6587;&#x4EF6;&#x5934;&#x5F00;&#x59CB;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x884C;&#xFF1B;&#x5F53;&#x8BB0;&#x5F55;&#x88AB;&#x8DF3;&#x8FC7;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x63A5;&#x53E3;LineCallbackHander&#x4E2D;&#x7684;handleLine()&#x64CD;&#x4F5C;&#xFF0C;&#x8BE5;&#x64CD;&#x4F5C;&#x4E2D;&#x80FD;&#x591F;&#x83B7;&#x53D6;&#x8DF3;&#x8FC7;&#x7684;&#x884C;&#x5185;&#x5BB9;&#x3002;</p>
+</blockquote>
+<p>&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x573A;&#x666F;&#x662F;&#x5C06;Falt&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5934;&#x8DF3;&#x8FC7;&#x540E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8DF3;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x5934;&#x5185;&#x5BB9;&#x76F4;&#x63A5;&#x5199;&#x5230;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x5934;&#x4E2D;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;LineCallbcckHandler&#x63A5;&#x53E3;&#x6765;&#x5B8C;&#x6210;&#x3002;</p>
+<p><code>LineCallbackHandler</code>&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>public interface LineCallbackHandler {
+    //&#x6BCF;&#x6B21;&#x8DF3;&#x8FC7;&#x65F6;&#x5747;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;
+    void handleLine(String var1);
+}
+</code></pre><h4 id="151-&#x81EA;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;linecallbackhandler">1.5.1 &#x81EA;&#x5B9A;&#x4E49;&#x5B9E;&#x73B0;LineCallbackHandler</h4>
+<p>&#x5B9E;&#x73B0;&#x63A5;&#x53E3;LineCallbackHandler&#xFF0C;&#x5C06;&#x8DF3;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code>public class CopyHeaderLineCallbackHandler implements LineCallbackHandler, FlatFileHeaderCallback {
+    private String header = &quot;&quot;;
+
+    //&#x8D1F;&#x8D23;&#x6536;&#x96C6;&#x8BFB;&#x6587;&#x4EF6;&#x8DF3;&#x8FC7;&#x7684;&#x5934;&#x8BB0;&#x5F55;
+    public void handleLine(String line) {
+        this.header = line;
+    }
+
+    //&#x8D1F;&#x8D23;&#x5199;&#x5165;&#x5230;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E2D;
+    public void writeHeader(Writer writer) throws IOException {
+        writer.write(header);
+    }
+}
+</code></pre><p>&#x5176;&#x4E2D;&#xFF0C;&#x63A5;&#x53E3;FlatFileHeaderCallback&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5728;ItemWrite&#x4E4B;&#x524D;&#x5199;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x5934;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x64CD;&#x4F5C;&#x662F;writeHeader().</p>
+<p>&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code>&lt;bean:bean id=&quot;copyHeaderItemReader&quot; scope=&quot;step&quot; class=&quot;org.springframework.batch.item.file.FlatFileItemReader&quot;&gt;
+    &lt;bean:property name=&quot;resource&quot; value=&quot;classpath:ch06/data/flat/credit-card-bill-201303-complex.csv&quot;/&gt;
+    &lt;bean:property name=&quot;lineMapper&quot; ref=&quot;lineMapper&quot; /&gt;
+    &lt;bean:property name=&quot;linesToSkip&quot; value=&quot;1&quot;/&gt;
+    &lt;bean:property name=&quot;skippedLinesCallback&quot; ref=&quot;copyHeaderLineCallbackHandler&quot;/&gt;
+    .........
+&lt;/bean:bean&gt;
+&lt;bean:bean id=&quot;copyHeaderLineCallbackHandler&quot; class=&quot;com.juxtapose.example.ch06.flat.CopyHeaderLineCallbackHandler&quot;&gt;
+&lt;/bean:bean&gt;
+&lt;bean:bean id=&quot;csvItemWriter&quot; class=&quot;org.springframework.batch.item.file.FlatFileItemWriter&quot; scope=&quot;step&quot;&gt;
+    &lt;bean:property name=&quot;resource&quot; value=&quot;file:target/ch06/copyheader/outputFile.csv&quot;/&gt;
+    &lt;bean:property name=&quot;headerCallback&quot; ref=&quot;copyHeaderLineCallbackHandler&quot;/&gt;
+    .........
+&lt;/bean:bean&gt;
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-06 11:18:16
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../5_5/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: spring中单例bean引用原型bean">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spring Batch -- FlatFileItemReader","level":"1.4.4","depth":2,"previous":{"title":"spring中单例bean引用原型bean","level":"1.4.3","depth":2,"path":"4week/5_5/index.md","ref":"4week/5_5/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4week/5_6/index.md","mtime":"2022-05-06T03:18:16.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-06T03:18:41.776Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
