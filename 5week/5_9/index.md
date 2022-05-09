@@ -118,3 +118,41 @@ SSL协议,当前版本为3.1(SSL3.1就是TLS1.0)。它已被广泛地用于Web�
 
 * [以前的笔记](https://qgao233.github.io/qgaoMajorKnowledge/chapter18/section6/)
 * [TLSv1.2介绍及Https协议SSL建立过程分析（OpenSSL源码）](https://blog.csdn.net/wteruiycbqqvwt/article/details/90764611)
+
+
+## 3 cp -p
+
+[命令cp -a 和 cp -p 有什么区别？](https://wenwen.sogou.com/z/q891822835.htm?fr=wap&_t=872623&rcer=)
+
+参数|意思
+:-|:-
+-a |相当于 -pdr 的意思（参数pdr分别为：保留权限，复制软链接本身，递归复制）；
+-p |连同档案的属性一起复制过去，而非使用预设属性；
+-d |若来源文件为连结文件的属性(link file)，则复制连结文件属性而非档案本身；
+-f |为强制 (force) 的意思，若有重复或其它疑问时，不会询问使用者，而强制复制；
+-i |若目的档(destination)已经存在时，在覆盖时会先询问是否真的动作！
+-l |进行硬式连结 (hard link) 的连结档建立，而非复制档案本身；
+-r |递归持续复制，用于目录的复制行为；
+-s |复制成为符号连结文件 (symbolic link)，亦即『快捷方式』档案；
+-u |若 destination 比 source 旧才更新 destination。
+
+## 4 File.renameTo
+
+[JAVA——File.renameTo方法，需要注意的坑](https://wenku.baidu.com/view/f1ece73fab114431b90d6c85ec3a87c241288a57.html)
+
+* 如果被重命名的文件已存在，那么renameTo()不会成功
+* renameTo()成功后，原文件会被删除
+
+## 5 git合并多次提交为1次
+
+[git实用技巧：将多次commit合并为一次](https://blog.csdn.net/qq_45503196/article/details/123876803)
+
+### 5.1 输入git rebase -i
+
+`git rebase -i a77517ad7fda85ba98f207`: 合并`(a77517ad7fda85ba98f207, head所指向的历史提交]`为1次提交
+
+### 5.2 弹出目的编辑窗口
+
+除第一行外的`pick`改成`s`后wq保存退出，会弹出最后的成功提示，再次wq保存退出即可。
+
+>可以看注释，有详细解释

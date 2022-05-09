@@ -394,6 +394,13 @@
 </ul></li>
 <li><div><a href="#22-ssl">2.2 SSL</a><i></i></div></li>
 </ul></li>
+<li><div><a href="#3-cp--p">3 cp -p</a><i></i></div></li>
+<li><div><a href="#4-filerenameto">4 File.renameTo</a><i></i></div></li>
+<li><div><a href="#5-git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;">5 git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#51-&#x8F93;&#x5165;git-rebase--i">5.1 &#x8F93;&#x5165;git rebase -i</a><i></i></div></li>
+<li><div><a href="#52-&#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;">5.2 &#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;</a><i></i></div></li>
+</ul></li>
 </ul>
 </div>
 
@@ -479,10 +486,73 @@ DigiCert&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x4FE1;&#x4EFB;&#x7684;&#x6839;&#x8BC1;
 <p>&#x8BE6;&#x60C5;&#x53EF;&#x67E5;&#x770B;&#xFF1A;</p>
 <ul>
 <li><a href="https://qgao233.github.io/qgaoMajorKnowledge/chapter18/section6/" target="_blank">&#x4EE5;&#x524D;&#x7684;&#x7B14;&#x8BB0;</a></li>
-<li><a href="https://blog.csdn.net/wteruiycbqqvwt/article/details/90764611" target="_blank">TLSv1.2&#x4ECB;&#x7ECD;&#x53CA;Https&#x534F;&#x8BAE;SSL&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;&#x5206;&#x6790;&#xFF08;OpenSSL&#x6E90;&#x7801;&#xFF09;</a> </li>
+<li><a href="https://blog.csdn.net/wteruiycbqqvwt/article/details/90764611" target="_blank">TLSv1.2&#x4ECB;&#x7ECD;&#x53CA;Https&#x534F;&#x8BAE;SSL&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;&#x5206;&#x6790;&#xFF08;OpenSSL&#x6E90;&#x7801;&#xFF09;</a></li>
 </ul>
+<h2 id="3-cp--p">3 cp -p</h2>
+<p><a href="https://wenwen.sogou.com/z/q891822835.htm?fr=wap&amp;_t=872623&amp;rcer=" target="_blank">&#x547D;&#x4EE4;cp -a &#x548C; cp -p &#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x610F;&#x601D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">&#x76F8;&#x5F53;&#x4E8E; -pdr &#x7684;&#x610F;&#x601D;&#xFF08;&#x53C2;&#x6570;pdr&#x5206;&#x522B;&#x4E3A;&#xFF1A;&#x4FDD;&#x7559;&#x6743;&#x9650;&#xFF0C;&#x590D;&#x5236;&#x8F6F;&#x94FE;&#x63A5;&#x672C;&#x8EAB;&#xFF0C;&#x9012;&#x5F52;&#x590D;&#x5236;&#xFF09;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-p</td>
+<td style="text-align:left">&#x8FDE;&#x540C;&#x6863;&#x6848;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x590D;&#x5236;&#x8FC7;&#x53BB;&#xFF0C;&#x800C;&#x975E;&#x4F7F;&#x7528;&#x9884;&#x8BBE;&#x5C5E;&#x6027;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">&#x82E5;&#x6765;&#x6E90;&#x6587;&#x4EF6;&#x4E3A;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;(link file)&#xFF0C;&#x5219;&#x590D;&#x5236;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x800C;&#x975E;&#x6863;&#x6848;&#x672C;&#x8EAB;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">&#x4E3A;&#x5F3A;&#x5236; (force) &#x7684;&#x610F;&#x601D;&#xFF0C;&#x82E5;&#x6709;&#x91CD;&#x590D;&#x6216;&#x5176;&#x5B83;&#x7591;&#x95EE;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x8BE2;&#x95EE;&#x4F7F;&#x7528;&#x8005;&#xFF0C;&#x800C;&#x5F3A;&#x5236;&#x590D;&#x5236;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-i</td>
+<td style="text-align:left">&#x82E5;&#x76EE;&#x7684;&#x6863;(destination)&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5728;&#x8986;&#x76D6;&#x65F6;&#x4F1A;&#x5148;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x771F;&#x7684;&#x52A8;&#x4F5C;&#xFF01;</td>
+</tr>
+<tr>
+<td style="text-align:left">-l</td>
+<td style="text-align:left">&#x8FDB;&#x884C;&#x786C;&#x5F0F;&#x8FDE;&#x7ED3; (hard link) &#x7684;&#x8FDE;&#x7ED3;&#x6863;&#x5EFA;&#x7ACB;&#xFF0C;&#x800C;&#x975E;&#x590D;&#x5236;&#x6863;&#x6848;&#x672C;&#x8EAB;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">&#x9012;&#x5F52;&#x6301;&#x7EED;&#x590D;&#x5236;&#xFF0C;&#x7528;&#x4E8E;&#x76EE;&#x5F55;&#x7684;&#x590D;&#x5236;&#x884C;&#x4E3A;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-s</td>
+<td style="text-align:left">&#x590D;&#x5236;&#x6210;&#x4E3A;&#x7B26;&#x53F7;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6; (symbolic link)&#xFF0C;&#x4EA6;&#x5373;&#x300E;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#x300F;&#x6863;&#x6848;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">&#x82E5; destination &#x6BD4; source &#x65E7;&#x624D;&#x66F4;&#x65B0; destination&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-filerenameto">4 File.renameTo</h2>
+<p><a href="https://wenku.baidu.com/view/f1ece73fab114431b90d6c85ec3a87c241288a57.html" target="_blank">JAVA&#x2014;&#x2014;File.renameTo&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5751;</a></p>
+<ul>
+<li>&#x5982;&#x679C;&#x88AB;&#x91CD;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;renameTo()&#x4E0D;&#x4F1A;&#x6210;&#x529F;</li>
+<li>renameTo()&#x6210;&#x529F;&#x540E;&#xFF0C;&#x539F;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x5220;&#x9664;</li>
+</ul>
+<h2 id="5-git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;">5 git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;</h2>
+<p><a href="https://blog.csdn.net/qq_45503196/article/details/123876803" target="_blank">git&#x5B9E;&#x7528;&#x6280;&#x5DE7;&#xFF1A;&#x5C06;&#x591A;&#x6B21;commit&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6B21;</a></p>
+<h3 id="51-&#x8F93;&#x5165;git-rebase--i">5.1 &#x8F93;&#x5165;git rebase -i</h3>
+<p><code>git rebase -i a77517ad7fda85ba98f207</code>: &#x5408;&#x5E76;<code>(a77517ad7fda85ba98f207, head&#x6240;&#x6307;&#x5411;&#x7684;&#x5386;&#x53F2;&#x63D0;&#x4EA4;]</code>&#x4E3A;1&#x6B21;&#x63D0;&#x4EA4;</p>
+<h3 id="52-&#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;">5.2 &#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;</h3>
+<p>&#x9664;&#x7B2C;&#x4E00;&#x884C;&#x5916;&#x7684;<code>pick</code>&#x6539;&#x6210;<code>s</code>&#x540E;wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x6700;&#x540E;&#x7684;&#x6210;&#x529F;&#x63D0;&#x793A;&#xFF0C;&#x518D;&#x6B21;wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x5373;&#x53EF;&#x3002;</p>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x6CE8;&#x91CA;&#xFF0C;&#x6709;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA; </p>
+</blockquote>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-05-09 14:42:24
+2022-05-09 18:35:59
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -519,7 +589,7 @@ DigiCert&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x4FE1;&#x4EFB;&#x7684;&#x6839;&#x8BC1;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"previous":{"title":"第5周","level":"1.5","depth":1,"ref":"","articles":[{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"path":"5week/5_9/index.md","ref":"5week/5_9/index.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5week/5_9/index.md","mtime":"2022-05-09T06:42:24.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-09T07:17:01.735Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"previous":{"title":"第5周","level":"1.5","depth":1,"ref":"","articles":[{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"path":"5week/5_9/index.md","ref":"5week/5_9/index.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5week/5_9/index.md","mtime":"2022-05-09T10:35:59.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-09T10:37:07.109Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
