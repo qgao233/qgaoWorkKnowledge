@@ -18,3 +18,4 @@
   * [TLS-v1.2与SSL-v3.1](5week/5_9/index.md)
   * [cherry-pick与CsvToBeanBuilder](5week/5_10/index.md)
   * [availableProcessors](5week/5_11/index.md)
+  * [子类与父类的bean管理](5week/5_13/index.md)
