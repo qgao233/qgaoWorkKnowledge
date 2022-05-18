@@ -21,3 +21,4 @@
   * [子类与父类的bean管理](5week/5_13/index.md)
 * [第6周]()
   * [spring的jdbcTemplate](6week/5_17/index.md)
+  * [spring的schedule定时任务](6week/5_18/index.md)
