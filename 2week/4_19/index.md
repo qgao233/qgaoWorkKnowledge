@@ -164,7 +164,8 @@ void testTimes() {
 
 可以通过@Mock注解来简化Mock对象的创建过程，这样的话，我们就可以在多个测试中直接共用这些mock对象了，
 
->需要注意的是，我们需要在方法开始执行下面的操作：MockitoAnnotations.initMocks
+>* 需要注意的是，我们需要在方法开始执行下面的操作：`MockitoAnnotations.initMocks`
+>* 但如果是专门的测试类的话，可以直接在类上添加`@RunWith(MockitoJUnitRunner.class)`
 
 ```
 @Mock
