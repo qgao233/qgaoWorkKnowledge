@@ -22,3 +22,4 @@
 * [第6周]()
   * [spring的jdbcTemplate](6week/5_17/index.md)
   * [spring的schedule定时任务](6week/5_18/index.md)
+  * [test测试与反射修改static final](6week/5_19/index.md)
