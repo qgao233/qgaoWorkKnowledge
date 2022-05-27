@@ -26,3 +26,4 @@
   * [oracle处理表的字段](6week/5_20/index.md)
 * [第7周]()
   * [StringSubstitutor](7week/5_25/index.md)
+  * [EL表达式与Parquet格式](7week/5_27/index.md)
