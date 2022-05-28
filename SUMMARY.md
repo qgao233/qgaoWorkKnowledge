@@ -27,3 +27,4 @@
 * [第7周]()
   * [StringSubstitutor](7week/5_25/index.md)
   * [EL表达式与Parquet格式](7week/5_27/index.md)
+  * [注解扩展限定与java提供的注入注解](7week/5_28/index.md)
