@@ -1,0 +1,827 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TLS-v1.2与SSL-v3.1 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../5_10/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第2周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../2week/4_19/">
+            
+                <a href="../../2week/4_19/">
+            
+                    
+                    测试与nio的Path,File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../2week/4_20/">
+            
+                <a href="../../2week/4_20/">
+            
+                    
+                    maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../2week/4_22/">
+            
+                <a href="../../2week/4_22/">
+            
+                    
+                    idea的git标签中的符号含义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    第3周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../3week/4_27/">
+            
+                <a href="../../3week/4_27/">
+            
+                    
+                    linux -- less
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第4周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../4week/5_3/">
+            
+                <a href="../../4week/5_3/">
+            
+                    
+                    java里执行第三方脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../4week/5_4/">
+            
+                <a href="../../4week/5_4/">
+            
+                    
+                    spring batch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../4week/5_5/">
+            
+                <a href="../../4week/5_5/">
+            
+                    
+                    spring中单例bean引用原型bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../4week/5_6/">
+            
+                <a href="../../4week/5_6/">
+            
+                    
+                    Spring Batch -- FlatFileItemReader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../4week/5_7/">
+            
+                <a href="../../4week/5_7/">
+            
+                    
+                    DataOutputStream和DataInputStream
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第5周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    TLS-v1.2与SSL-v3.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../5_10/">
+            
+                <a href="../5_10/">
+            
+                    
+                    cherry-pick与CsvToBeanBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../5_11/">
+            
+                <a href="../5_11/">
+            
+                    
+                    availableProcessors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../5_13/">
+            
+                <a href="../5_13/">
+            
+                    
+                    子类与父类的bean管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    第6周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../6week/5_17/">
+            
+                <a href="../../6week/5_17/">
+            
+                    
+                    spring的jdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../6week/5_18/">
+            
+                <a href="../../6week/5_18/">
+            
+                    
+                    spring的schedule定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../6week/5_19/">
+            
+                <a href="../../6week/5_19/">
+            
+                    
+                    test测试与反射修改static final
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../6week/5_20/">
+            
+                <a href="../../6week/5_20/">
+            
+                    
+                    oracle处理表的字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    第7周
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../7week/5_25/">
+            
+                <a href="../../7week/5_25/">
+            
+                    
+                    StringSubstitutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../7week/5_27/">
+            
+                <a href="../../7week/5_27/">
+            
+                    
+                    EL表达式与Parquet格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../7week/5_28/">
+            
+                <a href="../../7week/5_28/">
+            
+                    
+                    注解扩展限定与java提供的注入注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >TLS-v1.2与SSL-v3.1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; qgao 2021-* all right reserved, powered by <a href="https://github.com/aleen42" target="_blank">aleen42</a></span></div><ul>
+<li><div><a href="#1-idea-&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;">1 IDEA &#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;</a><i></i></div></li>
+<li><div><a href="#2-tls-v12&#x4E0E;ssl-v31">2 TLS-v1.2&#x4E0E;SSL-v3.1</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#21-tlsv12&#x534F;&#x8BAE;">2.1 TLSv1.2&#x534F;&#x8BAE;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#211-tls&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;">2.1.1 TLS&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;</a><i></i></div></li>
+<li><div><a href="#212-&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x603B;&#x4F53;&#x63CF;&#x8FF0;">2.1.2 &#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x603B;&#x4F53;&#x63CF;&#x8FF0;</a><i></i></div></li>
+<li><div><a href="#213-&#x4F20;&#x8F93;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;">2.1.3 &#x4F20;&#x8F93;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;</a><i></i></div></li>
+<li><div><a href="#214-&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;">2.1.4 &#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#22-ssl">2.2 SSL</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#3-cp--p">3 cp -p</a><i></i></div></li>
+<li><div><a href="#4-filerenameto">4 File.renameTo</a><i></i></div></li>
+<li><div><a href="#5-git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;">5 git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#51-&#x8F93;&#x5165;git-rebase--i">5.1 &#x8F93;&#x5165;git rebase -i</a><i></i></div></li>
+<li><div><a href="#52-&#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;">5.2 &#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;</a><i></i></div></li>
+<li><div><a href="#53-push&#x5230;&#x8FDC;&#x7A0B;">5.3 push&#x5230;&#x8FDC;&#x7A0B;</a><i></i></div></li>
+<li><div><a href="#54-pull&#x5230;&#x672C;&#x5730;">5.4 pull&#x5230;&#x672C;&#x5730;</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="&#x7B2C;5&#x5468;-59">&#x7B2C;5&#x5468;-5.9</h1>
+<h2 id="1-idea-&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;">1 IDEA &#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;</h2>
+<p>&#x5728;&#x76EE;&#x5F55;&#x6811;&#x91CC;&#x9009;&#x4E2D;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53F3;&#x952E;-&gt;<code>compare files</code>&#x3002;</p>
+<h2 id="2-tls-v12&#x4E0E;ssl-v31">2 TLS-v1.2&#x4E0E;SSL-v3.1</h2>
+<p><a href="https://blog.csdn.net/wteruiycbqqvwt/article/details/90764611" target="_blank">TLSv1.2&#x4ECB;&#x7ECD;&#x53CA;Https&#x534F;&#x8BAE;SSL&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;&#x5206;&#x6790;&#xFF08;OpenSSL&#x6E90;&#x7801;&#xFF09;</a></p>
+<p><strong>SSL3.1&#x5C31;&#x662F;TLS1.0</strong></p>
+<h3 id="21-tlsv12&#x534F;&#x8BAE;">2.1 TLSv1.2&#x534F;&#x8BAE;</h3>
+<p>3&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li>&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF1A;&#x901A;&#x8FC7;<strong>&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;</strong>&#x6765;&#x786E;&#x8BA4;&#x5BF9;&#x65B9;&#x7684;&#x8EAB;&#x4EFD;&#xFF0C;&#x9632;&#x6B62;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</li>
+<li>&#x6570;&#x636E;&#x79C1;&#x5BC6;&#x6027;&#xFF1A;&#x4F7F;&#x7528;<strong>&#x5BF9;&#x79F0;&#x6027;&#x5BC6;&#x94A5;&#x52A0;&#x5BC6;</strong>&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7531;&#x4E8E;&#x5BC6;&#x94A5;&#x53EA;&#x6709;&#x5BA2;&#x6237;&#x7AEF;/&#x670D;&#x52A1;&#x7AEF;&#x6709;&#xFF0C;&#x5176;&#x4ED6;&#x4EBA;&#x65E0;&#x6CD5;&#x7AA5;&#x63A2;&#x3002;</li>
+<li>&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#xFF1A;&#x4F7F;&#x7528;<strong>&#x6458;&#x8981;&#x7B97;&#x6CD5;</strong>&#x5BF9;&#x62A5;&#x6587;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x6536;&#x5230;&#x6D88;&#x606F;&#x540E;&#x6821;&#x9A8C;&#x8BE5;&#x503C;&#x9632;&#x6B62;&#x6570;&#x636E;&#x88AB;&#x7BE1;&#x6539;&#x6216;&#x4E22;&#x5931;&#x3002;</li>
+</ol>
+<h4 id="211-tls&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;">2.1.1 TLS&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;</h4>
+<p>&#x4F7F;&#x7528;<code>wireshark</code>&#x6293;&#x5305;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="media/1.png" alt=""></p>
+<p>&#x5176;&#x4E2D;<code>1-4</code>&#x662F;&#x63E1;&#x624B;&#x9636;&#x6BB5;&#xFF0C;<code>5</code>&#x662F;&#x6307;&#x63E1;&#x624B;&#x540E;&#x53CC;&#x65B9;&#x4F7F;&#x7528;&#x5546;&#x8BAE;&#x597D;&#x7684;&#x79D8;&#x94A5;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#x3002;</p>
+<p><code>2</code>&#x4E2D;&#x5E76;&#x5217;&#x7740;<code>Server Hello</code>,<code>Certificate</code>&#x7B49;&#x591A;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;<code>Multiple Handshake Messages</code>&#xFF0C;&#x4E00;&#x6B21;&#x6027;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x63E1;&#x624B;&#x534F;&#x8BAE;&#x5305;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="media/2.png" alt=""></p>
+<h4 id="212-&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x603B;&#x4F53;&#x63CF;&#x8FF0;">2.1.2 &#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x603B;&#x4F53;&#x63CF;&#x8FF0;</h4>
+<p>&#xFF08;1&#xFF09;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x3010;&#x5BA2;&#x6237;&#x7AEF;&#x968F;&#x673A;&#x6570;&#x3001;&#x53EF;&#x9009;&#x7B97;&#x6CD5;&#x5957;&#x4EF6;&#x3001;sessionId&#x3011;&#x7B49;&#x4FE1;&#x606F;
+&#xFF08;2&#xFF09;&#x670D;&#x52A1;&#x7AEF;&#x63D0;&#x4F9B;&#x3010;&#x670D;&#x52A1;&#x7AEF;&#x968F;&#x673A;&#x6570;&#x3001;&#x9009;&#x7528;&#x7B97;&#x6CD5;&#x5957;&#x4EF6;&#x3001;sessionId&#x3011;&#x7B49;&#x4FE1;&#x606F;
+&#xFF08;3&#xFF09;&#x670D;&#x52A1;&#x7AEF;&#x63D0;&#x4F9B;&#x8BC1;&#x4E66;
+&#xFF08;4&#xFF09;&#x670D;&#x52A1;&#x7AEF;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x4E92;&#x6362;&#x7B97;&#x6CD5;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;
+&#xFF08;5&#xFF09;&#x5BA2;&#x6237;&#x7AEF;&#x6839;&#x636E;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;&#x968F;&#x673A;&#x6570;&#x548C;&#x53C2;&#x6570;&#x751F;&#x6210;master secret&#xFF0C;&#x786E;&#x8BA4;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7B97;&#x6CD5;&#x52A0;&#x5BC6;&#xFF0C;&#x5E76;&#x5C06;&#x63E1;&#x624B;&#x4FE1;&#x606F;&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x7528;&#x6765;&#x6821;&#x9A8C;&#x63E1;&#x624B;&#x4FE1;&#x606F;&#x3001;&#x79D8;&#x94A5;&#x662F;&#x5426;&#x6B63;&#x786E;
+&#xFF08;6&#xFF09;&#x670D;&#x52A1;&#x7AEF;&#x8FDB;&#x884C;&#x4E0E;&#xFF08;5&#xFF09;&#x4E00;&#x6837;&#x7684;&#x64CD;&#x4F5C;
+&#xFF08;7&#xFF09;&#x5BA2;&#x6237;&#x7AEF;&#x3001;&#x670D;&#x52A1;&#x7AEF;&#x53EF;&#x4EE5;&#x7528;master secret&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x901A;&#x8BAF;</p>
+<h4 id="213-&#x4F20;&#x8F93;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;">2.1.3 &#x4F20;&#x8F93;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;</h4>
+<p><strong>cipher suites&#xFF1A;&#x7B97;&#x6CD5;&#x5957;&#x4EF6;</strong></p>
+<p>&#x6BCF;&#x4E2A;&#x7B97;&#x6CD5;&#x5957;&#x4EF6;&#x662F;&#x4E00;&#x7EC4;&#x7B97;&#x6CD5;&#xFF0C;&#x4EE5;<code>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</code>&#x4E3A;&#x4F8B;&#x3002;
+&#x5176;&#x4E2D;</p>
+<ul>
+<li><code>ECDHE</code>&#xFF1A;&#x7528;&#x4E8E;&#x534F;&#x5546;&#x79D8;&#x94A5; <a href="https://blog.csdn.net/mrpre/article/details/78025940" target="_blank">https://blog.csdn.net/mrpre/article/details/78025940</a></li>
+<li><code>RSA</code>&#xFF1A;&#x7528;&#x4E8E;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</li>
+<li><code>AES_128_GCM</code>&#xFF1A;&#x7528;&#x4E8E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x901A;&#x8BAF;</li>
+<li><code>SHA256</code>&#xFF1A;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x6458;&#x8981;&#xFF0C;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;</li>
+</ul>
+<p><strong>&#x79D8;&#x94A5;&#x534F;&#x5546;&#x8FC7;&#x7A0B;</strong></p>
+<p>&#x8FD9;&#x91CC;&#x6D89;&#x53CA;&#x5230;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<code>client random</code>&#xFF0C;<code>server random</code>&#xFF0C;<code>pre master key</code>&#xFF0C;<code>master key</code>&#xFF0C;&#x5176;&#x4E2D;<code>master key</code>&#x662F;&#x6700;&#x7EC8;&#x534F;&#x5546;&#x51FA;&#x6765;&#x7684;&#x79D8;&#x94A5;&#xFF0C;&#x540E;&#x7EED;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x901A;&#x8BAF;&#x90FD;&#x662F;&#x4F7F;&#x7528;<code>master key</code>&#x3002;</p>
+<p>&#xFF08;1&#xFF09;<code>master key</code>&#x662F;&#x4F7F;&#x7528;&#x4F2A;&#x968F;&#x673A;&#x7B97;&#x6CD5;&#xFF0C;&#x7ED3;&#x5408;<code>client random</code>&#xFF0C;<code>server random</code>&#xFF0C;<code>pre master key</code>&#x4E09;&#x4E2A;&#x968F;&#x673A;&#x56E0;&#x7D20;&#x751F;&#x6210;&#x7684;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;<code>client random</code>&#x548C;<code>server random</code>&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x5206;&#x522B;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x589E;&#x52A0;&#x4E86;&#x968F;&#x673A;&#x6027;&#x3002;</p>
+<p>&#xFF08;3&#xFF09;<code>pre master key</code>&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x5B9A;&#x89C4;&#x5219;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;
+&#x6211;&#x4EEC;&#x4F9D;&#x65E7;&#x4EE5;<code>TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</code>&#x4E3A;&#x4F8B;&#x8BB2;&#x8FF0;&#x4E00;&#x4E0B;<code>pre master key</code>&#x7684;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#x3002;</p>
+<blockquote>
+<p>&#x2460; &#x5BA2;&#x6237;&#x7AEF;&#x968F;&#x673A;&#x751F;&#x6210;&#x968F;&#x673A;&#x503C;Ra&#xFF0C;&#x8BA1;&#x7B97;Pa = Ra <em> Q(x, y)&#xFF0C;Q(x, y)&#x4E3A;&#x5168;&#x4E16;&#x754C;&#x516C;&#x8BA4;&#x7684;&#x67D0;&#x4E2A;&#x692D;&#x5706;&#x66F2;&#x7EBF;&#x7B97;&#x6CD5;&#x7684;&#x57FA;&#x70B9;&#x3002;&#x5C06;Pa&#x53D1;&#x9001;&#x81F3;&#x670D;&#x52A1;&#x5668;&#x3002;
+&#x2461; &#x670D;&#x52A1;&#x5668;&#x968F;&#x673A;&#x751F;&#x6210;&#x968F;&#x673A;&#x503C;Rb&#xFF0C;&#x8BA1;&#x7B97;Pb - Rb </em> Q(x, y)&#x3002;&#x5C06;Pb&#x53D1;&#x9001;&#x81F3;&#x5BA2;&#x6237;&#x7AEF;&#x3002;
+&#x7531;&#x4E8E;&#x7B97;&#x6CD5;&#x7684;&#x4E0D;&#x53EF;&#x9006;&#x8F6C;&#x6027;&#xFF0C;&#x5916;&#x754C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;Pa&#x3001;Pb&#x63A8;&#x7B97;&#x51FA;Ra&#x3001;Rb
+&#x2462; &#x56E0;&#x4E3A;&#x7B97;&#x6CD5;&#x4FDD;&#x8BC1;&#x4E86;Ra <em> Pb= Rb </em>Pa&#xFF0C;&#x6240;&#x4EE5;&#x5BA2;&#x6237;&#x7AEF;&#x8BA1;&#x7B97;S = Ra <em> Pb&#xFF1B;&#x670D;&#x52A1;&#x5668;&#x8BA1;&#x7B97;S = Rb </em>Pa&#xFF0C;&#x63D0;&#x53D6;&#x5176;&#x4E2D;&#x7684;S&#x7684;x&#x5411;&#x91CF;&#x4F5C;&#x4E3A;&#x5BC6;&#x94A5;&#xFF08;pre master key&#xFF09;</p>
+</blockquote>
+<p><code>TLS</code>&#x63E1;&#x624B;&#x8FC7;&#x7A0B;&#x4E2D;&#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x4E92;&#x6362;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x4EA4;&#x6362;<code>Pa</code>&#x548C;<code>Pb</code>&#xFF0C;&#x4EA4;&#x6362;&#x540E;&#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x6839;&#x636E;<code>ECDHE</code>&#x7B97;&#x51FA;&#x540C;&#x4E00;&#x4E2A;<code>pre master key</code>&#x3002;</p>
+<h4 id="214-&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;">2.1.4 &#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x8FC7;&#x7A0B;</h4>
+<p>&#x505A;&#x4E24;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ol>
+<li>&#x786E;&#x8BA4;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x8BC1;&#x4E66;&#x662F;&#x5408;&#x6CD5;&#x7684;</li>
+<li>&#x786E;&#x8BA4;&#x670D;&#x52A1;&#x5668;&#x62E5;&#x6709;&#x79C1;&#x94A5;</li>
+</ol>
+<p><strong>1 &#x9A8C;&#x8BC1;&#x8BC1;&#x4E66;&#x5408;&#x6CD5;&#x6027;</strong></p>
+<p>&#x4EE5;csdn&#x7F51;&#x7AD9;&#x4E3A;&#x4F8B;&#xFF0C;&#x5176;&#x8BC1;&#x4E66;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="media/3.png" alt=""></p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x8BC1;&#x4E66;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x53D1;&#x9001;&#x6574;&#x4E2A;&#x8BC1;&#x4E66;&#x94FE;&#xFF08;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x4F20;&#x8F93;&#x6839;&#x8BC1;&#x4E66;&#xFF0C;&#x6211;&#x8BA4;&#x4E3A;&#x662F;&#x56E0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x5E26;&#x4E86;&#x6839;&#x8BC1;&#x4E66;&#xFF0C;&#x5E76;&#x4E14;&#x4FE1;&#x4EFB;&#x5B83;&#xFF09;</p>
+<p><img src="media/4.png" alt=""></p>
+<p>&#x6BCF;&#x4E2A;&#x8BC1;&#x4E66;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;<strong>&#x57FA;&#x672C;&#x4FE1;&#x606F;</strong>&#x3001;<strong>&#x8BC1;&#x4E66;&#x516C;&#x94A5;</strong>&#x548C;<strong>&#x8BC1;&#x4E66;&#x7B7E;&#x540D;</strong>&#x3002;&#x5176;&#x4E2D;&#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x662F;&#x5BF9;&#x8BC1;&#x4E66;&#x8FDB;&#x884C;&#x6458;&#x8981;&#x8BA1;&#x7B97;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x9881;&#x53D1;&#x673A;&#x6784;&#x7684;&#x79C1;&#x94A5;&#x52A0;&#x5BC6;&#x751F;&#x6210;&#x3002;</p>
+<p>&#x4E3A;&#x8BC1;&#x5B9E;csdn.net&#x8BC1;&#x4E66;&#x7684;&#x5408;&#x6CD5;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;GeoTrust RSA CA 2018&#x7684;&#x516C;&#x94A5;&#x5BF9;&#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#xFF0C;&#x89E3;&#x5BC6;&#x540E;&#x4E0E;&#x8BC1;&#x4E66;&#x7684;&#x6458;&#x8981;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x4E00;&#x81F4;&#x8BC1;&#x660E;csdn.net&#x8BC1;&#x4E66;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#x3002;
+&#x540C;&#x6837;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BC1;&#x660E;GeoTrust RSA CA 2018&#x7684;&#x5408;&#x6CD5;&#x6027;&#xFF0C;&#x4F7F;&#x7528;DigiCert&#x7684;&#x516C;&#x94A5;&#x3002;
+DigiCert&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x4FE1;&#x4EFB;&#x7684;&#x6839;&#x8BC1;&#x4E66;&#xFF0C;&#x65E0;&#x9700;&#x6821;&#x9A8C;&#x3002;</p>
+<p><strong>2 &#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x62E5;&#x6709;&#x79C1;&#x94A5;</strong></p>
+<p>&#x5982;&#x679C;&#x5BC6;&#x94A5;&#x534F;&#x5546;&#x8FC7;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x662F;RSA&#x7B97;&#x6CD5;&#xFF0C;&#x5219;&#x5DF2;&#x7ECF;&#x9A8C;&#x8BC1;&#x4E86;&#x670D;&#x52A1;&#x5668;&#x62E5;&#x6709;&#x79C1;&#x94A5;
+&#x5982;&#x679C;&#x5BC6;&#x94A5;&#x534F;&#x5546;&#x8FC7;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x662F;ECDHE&#x7B97;&#x6CD5;&#xFF0C;&#x5219;&#x6CA1;&#x6709;&#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x7684;&#x79C1;&#x94A5;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x5728;server key exchange&#x65F6;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6458;&#x8981;&#x8BA1;&#x7B97;&#x5E76;&#x4F7F;&#x7528;&#x79C1;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x6B63;&#x5E38;&#x89E3;&#x5BC6;&#xFF0C;&#x5219;&#x8BC1;&#x660E;&#x670D;&#x52A1;&#x5668;&#x62E5;&#x6709;&#x79C1;&#x94A5;&#x3002;</p>
+<p><img src="media/5.png" alt=""></p>
+<p><strong>3 sessionId - &#x63E1;&#x624B;&#x91CD;&#x7528;</strong></p>
+<p>&#x5728;Hello&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;sessionId&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x91CD;&#x7528;&#x63E1;&#x624B;&#x4FE1;&#x606F;&#x7684;&#x3002;
+&#xFF08;1&#xFF09;&#x7B2C;&#x4E00;&#x6B21;&#x63E1;&#x624B;&#x7684;&#x65F6;&#x5019;
+&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;sessionId&#x4E3A;&#x7A7A;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;&#x751F;&#x6210;sessionId&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5E76;&#x5C06;&#x63E1;&#x624B;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#x3002;
+&#xFF08;2&#xFF09;&#x518D;&#x6B21;&#x63E1;&#x624B;&#x7684;&#x65F6;&#x5019;
+&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x3010;&#x4E0A;&#x6B21;&#x7684;sessionId&#x3011;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x68C0;&#x67E5;&#x5230;sessionId&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;&#x540C;&#x6837;&#x7684;sessionId&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E0A;&#x6B21;&#x5546;&#x5B9A;&#x7684;&#x79D8;&#x94A5;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#x4E86;&#x3002;
+&#xFF08;3&#xFF09;session&#x8FC7;&#x671F;&#x65F6;
+&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x3010;&#x4E0A;&#x6B21;&#x7684;sessionId&#x3011;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x68C0;&#x67E5;&#x5230;sessionId&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x65B0;&#x7684;sessionId&#xFF0C;&#x7EE7;&#x7EED;&#x6B63;&#x5E38;&#x7684;&#x63E1;&#x624B;&#x6D41;&#x7A0B;&#x3002;</p>
+<h3 id="22-ssl">2.2 SSL</h3>
+<p>SSL&#x534F;&#x8BAE;,&#x5F53;&#x524D;&#x7248;&#x672C;&#x4E3A;3.1(SSL3.1&#x5C31;&#x662F;TLS1.0)&#x3002;&#x5B83;&#x5DF2;&#x88AB;&#x5E7F;&#x6CDB;&#x5730;&#x7528;&#x4E8E;Web&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x548C;&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x4F20;&#x8F93;.&#x5B83;&#x4F4D;&#x4E8E;TCP/IP&#x534F;&#x8BAE;&#x4E0E;&#x5404;&#x79CD;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x4E4B;&#x95F4;&#xFF0C;&#x4E3A;&#x6570;&#x636E;&#x901A;&#x8BAF;&#x63D0;&#x4F9B;&#x5B89;&#x5168;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x8BE6;&#x60C5;&#x53EF;&#x67E5;&#x770B;&#xFF1A;</p>
+<ul>
+<li><a href="https://qgao233.github.io/qgaoMajorKnowledge/chapter18/section6/" target="_blank">&#x4EE5;&#x524D;&#x7684;&#x7B14;&#x8BB0;</a></li>
+<li><a href="https://blog.csdn.net/wteruiycbqqvwt/article/details/90764611" target="_blank">TLSv1.2&#x4ECB;&#x7ECD;&#x53CA;Https&#x534F;&#x8BAE;SSL&#x5EFA;&#x7ACB;&#x8FC7;&#x7A0B;&#x5206;&#x6790;&#xFF08;OpenSSL&#x6E90;&#x7801;&#xFF09;</a></li>
+</ul>
+<h2 id="3-cp--p">3 cp -p</h2>
+<p><a href="https://wenwen.sogou.com/z/q891822835.htm?fr=wap&amp;_t=872623&amp;rcer=" target="_blank">&#x547D;&#x4EE4;cp -a &#x548C; cp -p &#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x610F;&#x601D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">&#x76F8;&#x5F53;&#x4E8E; -pdr &#x7684;&#x610F;&#x601D;&#xFF08;&#x53C2;&#x6570;pdr&#x5206;&#x522B;&#x4E3A;&#xFF1A;&#x4FDD;&#x7559;&#x6743;&#x9650;&#xFF0C;&#x590D;&#x5236;&#x8F6F;&#x94FE;&#x63A5;&#x672C;&#x8EAB;&#xFF0C;&#x9012;&#x5F52;&#x590D;&#x5236;&#xFF09;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-p</td>
+<td style="text-align:left">&#x8FDE;&#x540C;&#x6863;&#x6848;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x8D77;&#x590D;&#x5236;&#x8FC7;&#x53BB;&#xFF0C;&#x800C;&#x975E;&#x4F7F;&#x7528;&#x9884;&#x8BBE;&#x5C5E;&#x6027;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">&#x82E5;&#x6765;&#x6E90;&#x6587;&#x4EF6;&#x4E3A;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;(link file)&#xFF0C;&#x5219;&#x590D;&#x5236;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x800C;&#x975E;&#x6863;&#x6848;&#x672C;&#x8EAB;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">&#x4E3A;&#x5F3A;&#x5236; (force) &#x7684;&#x610F;&#x601D;&#xFF0C;&#x82E5;&#x6709;&#x91CD;&#x590D;&#x6216;&#x5176;&#x5B83;&#x7591;&#x95EE;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x8BE2;&#x95EE;&#x4F7F;&#x7528;&#x8005;&#xFF0C;&#x800C;&#x5F3A;&#x5236;&#x590D;&#x5236;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-i</td>
+<td style="text-align:left">&#x82E5;&#x76EE;&#x7684;&#x6863;(destination)&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5728;&#x8986;&#x76D6;&#x65F6;&#x4F1A;&#x5148;&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x771F;&#x7684;&#x52A8;&#x4F5C;&#xFF01;</td>
+</tr>
+<tr>
+<td style="text-align:left">-l</td>
+<td style="text-align:left">&#x8FDB;&#x884C;&#x786C;&#x5F0F;&#x8FDE;&#x7ED3; (hard link) &#x7684;&#x8FDE;&#x7ED3;&#x6863;&#x5EFA;&#x7ACB;&#xFF0C;&#x800C;&#x975E;&#x590D;&#x5236;&#x6863;&#x6848;&#x672C;&#x8EAB;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">&#x9012;&#x5F52;&#x6301;&#x7EED;&#x590D;&#x5236;&#xFF0C;&#x7528;&#x4E8E;&#x76EE;&#x5F55;&#x7684;&#x590D;&#x5236;&#x884C;&#x4E3A;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-s</td>
+<td style="text-align:left">&#x590D;&#x5236;&#x6210;&#x4E3A;&#x7B26;&#x53F7;&#x8FDE;&#x7ED3;&#x6587;&#x4EF6; (symbolic link)&#xFF0C;&#x4EA6;&#x5373;&#x300E;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#x300F;&#x6863;&#x6848;&#xFF1B;</td>
+</tr>
+<tr>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">&#x82E5; destination &#x6BD4; source &#x65E7;&#x624D;&#x66F4;&#x65B0; destination&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-filerenameto">4 File.renameTo</h2>
+<p><a href="https://wenku.baidu.com/view/f1ece73fab114431b90d6c85ec3a87c241288a57.html" target="_blank">JAVA&#x2014;&#x2014;File.renameTo&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5751;</a></p>
+<ul>
+<li>&#x5982;&#x679C;&#x88AB;&#x91CD;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;renameTo()&#x4E0D;&#x4F1A;&#x6210;&#x529F;</li>
+<li>renameTo()&#x6210;&#x529F;&#x540E;&#xFF0C;&#x539F;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x5220;&#x9664;</li>
+</ul>
+<h2 id="5-git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;">5 git&#x5408;&#x5E76;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#x4E3A;1&#x6B21;</h2>
+<p><a href="https://blog.csdn.net/qq_45503196/article/details/123876803" target="_blank">git&#x5B9E;&#x7528;&#x6280;&#x5DE7;&#xFF1A;&#x5C06;&#x591A;&#x6B21;commit&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6B21;</a></p>
+<h3 id="51-&#x8F93;&#x5165;git-rebase--i">5.1 &#x8F93;&#x5165;git rebase -i</h3>
+<p><code>git rebase -i a77517ad7fda85ba98f207</code>: &#x5408;&#x5E76;<code>(a77517ad7fda85ba98f207, head&#x6240;&#x6307;&#x5411;&#x7684;&#x5386;&#x53F2;&#x63D0;&#x4EA4;]</code>&#x4E3A;1&#x6B21;&#x63D0;&#x4EA4;</p>
+<h3 id="52-&#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;">5.2 &#x5F39;&#x51FA;&#x76EE;&#x7684;&#x7F16;&#x8F91;&#x7A97;&#x53E3;</h3>
+<p>&#x9664;&#x7B2C;&#x4E00;&#x884C;&#x5916;&#x7684;<code>pick</code>&#x6539;&#x6210;<code>s</code>&#x540E;wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x6700;&#x540E;&#x7684;&#x6210;&#x529F;&#x63D0;&#x793A;&#xFF0C;&#x518D;&#x6B21;wq&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x5373;&#x53EF;&#x3002;</p>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x6CE8;&#x91CA;&#xFF0C;&#x6709;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;</p>
+</blockquote>
+<h3 id="53-push&#x5230;&#x8FDC;&#x7A0B;">5.3 push&#x5230;&#x8FDC;&#x7A0B;</h3>
+<p>&#x56E0;&#x4E3A;&#x6B64;&#x65F6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x6709;&#x591A;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x800C;&#x672C;&#x5730;&#x5DF2;&#x7ECF;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;push&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x6539;&#x7528;force&#x53C2;&#x6570;&#x5F3A;&#x5236;&#x7528;&#x672C;&#x5730;&#x5206;&#x652F;&#x8986;&#x76D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x3002;</p>
+<p><code>git push --force-with-lease</code></p>
+<p>&#x4F7F;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x5728;&#x5F3A;&#x5236;&#x8986;&#x76D6;&#x524D;&#x4F1A;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x68C0;&#x67E5;&#x5982;&#x679C;&#x5176;&#x4ED6;&#x4EBA;&#x5728;&#x8BE5;&#x5206;&#x652F;&#x4E0A;&#x6709;&#x63D0;&#x4EA4;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8986;&#x76D6;&#x4EE3;&#x7801;&#x7684;&#x98CE;&#x9669;&#x3002;</p>
+<h3 id="54-pull&#x5230;&#x672C;&#x5730;">5.4 pull&#x5230;&#x672C;&#x5730;</h3>
+<p>&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x4E0A;&#x88AB;&#x4ED6;&#x4EBA;rebase&#x64CD;&#x4F5C;&#x7136;&#x540E;&#x5F3A;&#x5236;&#x63A8;&#x9001;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<p><code>git pull --rebase</code> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-16 10:17:38
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../5_10/" class="navigation navigation-next navigation-unique" aria-label="Next page: cherry-pick与CsvToBeanBuilder">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"next":{"title":"cherry-pick与CsvToBeanBuilder","level":"1.5.2","depth":2,"path":"5week/5_10/index.md","ref":"5week/5_10/index.md","articles":[]},"previous":{"title":"第5周","level":"1.5","depth":1,"ref":"","articles":[{"title":"TLS-v1.2与SSL-v3.1","level":"1.5.1","depth":2,"path":"5week/5_9/index.md","ref":"5week/5_9/index.md","articles":[]},{"title":"cherry-pick与CsvToBeanBuilder","level":"1.5.2","depth":2,"path":"5week/5_10/index.md","ref":"5week/5_10/index.md","articles":[]},{"title":"availableProcessors","level":"1.5.3","depth":2,"path":"5week/5_11/index.md","ref":"5week/5_11/index.md","articles":[]},{"title":"子类与父类的bean管理","level":"1.5.4","depth":2,"path":"5week/5_13/index.md","ref":"5week/5_13/index.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5week/5_9/index.md","mtime":"2022-05-16T02:17:38.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-28T12:53:10.071Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
