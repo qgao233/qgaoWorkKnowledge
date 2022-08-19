@@ -1,4 +1,4 @@
-# SOAP介绍
+# SOAP与WSDL
 
 ## 1 什么是SOAP?
 
@@ -198,3 +198,127 @@ WSDL采用了W3C XML模式内置类型作为其基本类型系统。types元素�
 
 * sayHello相当于一个方法，里面的： `name="nickname" type="xsd:string"`，是确定传入name的参数是String类型的，即`sayHello(String nickname)`，
 * 而sayHelloResponse中的 `name="return" type="xsd:string"` 是确定方法`sayHello(String nickname)`返回的类型是String类型的，即`String sayHello(String nickname)`
+
+#### 2.5.3 import
+
+ import元素使得可以在当前的WSDL文档中使用其他WSDL文档中指定的命名空间中的定义元素。
+ 
+ 本例子中没有使用import元素。通常在用户希望模块化WSDL文档的时候，该功能是非常有效果的。 
+
+ ```
+ <wsdl:import namespace="http://xxx.xxx.xxx/xxx/xxx" location="http://xxx.xxx.xxx/xxx/xxx.wsdl"/>
+ ```
+
+必须有namespace属性和location属性： 
+
+1. namespace属性：值必须与正导入的WSDL文档中声明的targetNamespace相匹配； 
+2. location属性：必须指向一个实际的WSDL文档，并且该文档不能为空。
+
+#### 2.5.4 message
+
+message元素描述了：
+
+* Web服务使用消息的有效负载。
+* 输出或者接受消息的有效负载。
+* SOAP文件头和错误detail元素的内容。
+
+定义message元素的方式取决于**使用RPC样式**还是**文档样式**的消息传递。
+
+在本文中的message元素的定义使用了采用文档样式的消息传递：
+
+```
+<wsdl:message name="sayHelloRequest">
+    <wsdl:part name="parameters" element="tns:sayHello" />
+</wsdl:message>
+<wsdl:message name="sayHelloResponse">
+    <wsdl:part name="parameters" element="tns:sayHelloResponse" />
+</wsdl:message>
+```
+
+该部分是消息格式的抽象定义：定义了两个消息sayHelloResponse和sayHelloRequest：
+
+**Ⅰ· sayHelloRequest：**
+
+sayHello操作的请求消息格式，由一个消息片段组成，名字为parameters,元素是我们前面定义的types中的元素；
+
+**Ⅱ· sayHelloResponse：**
+
+sayHello操作的响应消息格式，由一个消息片段组成，名字为parameters,元素是我们前面定义的types中的元素；
+
+如果采用RPC样式的消息传递，只需要将文档中的element元素修改为type即可。
+
+#### 2.5.5 portType
+
+portType元素定义了Web服务的抽象接口。
+
+该接口有点类似Java的接口，都是定义了一个抽象类型和方法，没有定义实现。
+
+在WSDL中，portType元素是由binding和service元素来实现的，这两个元素用来说明Web服务实现使用的Internet协议、编码方案以及Internet地址。 
+
+一个portType中可以定义多个operation，一个operation可以看作是一个**方法**，本文中WSDL文档的定义：
+
+```
+<wsdl:portType name="HelloServicePortType">
+    <wsdl:operation name="sayHello">
+        <wsdl:input name="sayHelloRequest"
+            message="tns:sayHelloRequest" />
+        <wsdl:output name="sayHelloResponse"
+            message="tns:sayHelloResponse" />
+    </wsdl:operation>
+</wsdl:portType>
+```
+
+portType定义了服务的调用模式的类型，这里包含一个操作sayHello方法，同时包含input和output表明该操作是一个请求／响应模式，
+
+* 请求消息是前面定义的sayHelloRequest，
+* 响应消息是前面定义的sayHelloResponse。
+* input表示传递到Web服务的有效负载，
+* output消息表示传递给客户的有效负载。 
+
+这里相当于抽象类中定义了一个抽象方法sayHello，而方法参数的定义和返回值的定义都是在types中设置的，方法名又是在message中定义有的。
+
+#### 2.5.6 binding
+
+binding元素将一个抽象portType映射到一组具体协议(SOAP和HTTP)、消息传递样式、编码样式。
+
+通常binding元素与协议专有的元素和在一起使用，本文中的例子：
+
+```
+<wsdl:binding name="HelloServiceHttpBinding" type="tns:HelloServicePortType">
+    <wsdlsoap:binding style="document"
+        transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sayHello">
+        <wsdlsoap:operation soapAction="" />
+        <wsdl:input name="sayHelloRequest">
+            <wsdlsoap:body use="literal" />
+        </wsdl:input>
+        <wsdl:output name="sayHelloResponse">
+            <wsdlsoap:body use="literal" />
+        </wsdl:output>
+    </wsdl:operation>
+</wsdl:binding>
+```
+
+这部分将服务访问点的抽象定义与SOAP、HTTP绑定，描述如何通过SOAP/HTTP来访问按照前面描述的访问入口点类型部署的访问入口。 
+
+其中规定了在具体SOAP调用时，应当使用的soapAction是”xxx”，这个Action在WebService代码调用中是很重要的。具体的使用需要参考特定协议定义的元素。
+
+#### 2.5.7 service和port
+
+service元素包含一个或者多个port元素，其中每个port元素表示一个不同的Web服务。
+
+port元素将URL赋给一个特定的binding，甚至可以使两个或者多个port元素将不同的URL赋值给相同的binding。
+
+文档中的例子：
+
+```
+<wsdl:service name="HelloService">
+    <wsdl:port name="HelloServiceHttpPort"
+        binding="tns:HelloServiceHttpBinding">
+        <wsdlsoap:address
+            location="http://localhost:8080/xfire/services/HelloService" />
+    </wsdl:port>
+</wsdl:service>
+```
+
+>原作者原话：对于这个WSDL文档的学习，第一次看是感觉非常陌生的，而且里面元素又多，学习的话先是要了解外层结构代表的意义和作用，然后理解里面的元素的意义和作用，有些元素作用不大，有些元素又是很关联的，有些元素是比较重要的。 
