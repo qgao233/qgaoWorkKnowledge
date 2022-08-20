@@ -66,6 +66,8 @@
     * [test测试常用注解](spring/test/index.md)
   * [xml配置文件]()
     * [xml bean的property的简写——p命令空间](spring/xml/p.md)
+  * [框架]()
+    * [API框架-Swagger](spring/framework/swagger.md)
   * [EL表达式](spring/el.md)
   * [jdbcTemplate](spring/jdbcTemplate.md)
   * [schedule定时任务](spring/schedule.md)
