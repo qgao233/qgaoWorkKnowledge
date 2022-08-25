@@ -75,3 +75,4 @@
   * [LDAP和AD域](windows/adArea.md)
 * [Python]()
   * [\_\_name\_\_=='\_\_main\_\_'](python/base.md)
+  * [Python 类型提示](python/type.md)
