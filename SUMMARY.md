@@ -47,6 +47,7 @@
   * [linux -- less](linux/less.md)
 * [maven]()
   * [生命周期和寻找依赖流程](maven/lifeCycle.md)
+  * [多仓库配置](maven/repository.md)
 * [network]()
   * [TLS-v1.2与SSL-v3.1](network/ssl.md)
   * [web service]()
