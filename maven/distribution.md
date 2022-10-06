@@ -1,6 +1,6 @@
 # maven中的distributionManagement的作用(mvn deploy)
 
-[maven中的distributionManagement的作用](https://blog.csdn.net/qq_31924435/article/details/53745811)
+参考：[maven中的distributionManagement的作用](https://blog.csdn.net/qq_31924435/article/details/53745811)
 
 `mvn deploy` 用来将项目生成的jar包分发到远程Maven仓库。
 
