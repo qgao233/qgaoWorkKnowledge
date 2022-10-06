@@ -81,6 +81,7 @@
   * [EL表达式](spring/el.md)
   * [jdbcTemplate](spring/jdbcTemplate.md)
   * [schedule定时任务](spring/schedule.md)
+  * [使用内省导致内存泄露](spring/introspector.md)
 * [windows]()
   * [LDAP和AD域](windows/adArea.md)
 * [Python]()

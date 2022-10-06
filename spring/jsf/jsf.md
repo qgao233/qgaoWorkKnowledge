@@ -2,6 +2,8 @@
 
 参考：[JSF、facelets](https://www.cnblogs.com/yxsh/p/9001296.html)
 
+---
+
 * jsf是一种用于构建java web应用程序的框架。它提供了一种**以组件为中心**的用户界面（UI）构建方法，从而简化了Java服务器端应用程序的开发。
 
 >参考现在的vue、react前端框架
