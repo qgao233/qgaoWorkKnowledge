@@ -44,6 +44,7 @@
   * [java里执行第三方脚本](java/script.md)
   * [CsvToBeanBuilder](java/transform.md)
   * [HttpURLConnection](java/urlConn.md.md)
+  * [JNDI粗略了解](java/jndi.md)
 * [linux]()
   * [cp -p](linux/cp.md)
   * [linux -- less](linux/less.md)

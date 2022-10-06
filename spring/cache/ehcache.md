@@ -2,6 +2,8 @@
 
 参考：[Spring和Ehcache整合详解](https://blog.csdn.net/feiyangtianyao/article/details/90692021)
 
+---
+
 Spring 提供了对缓存功能的抽象：本身不直接提供缓存功能的实现，但允许绑定不同的缓存解决方案（如Ehcache），spring支持注解方式使用缓存，非常方便。
 
 * Ehcache是一个纯Java的进程内缓存框架，具有快速、精干等特点，使用的是本地的内存做缓存，
