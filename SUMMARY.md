@@ -67,6 +67,8 @@
     * [子类与父类的bean管理](spring/bean/beanManage.md)
     * [spring通过配置与注解给字段赋值](spring/bean/field.md)
     * [spring中单例bean引用原型bean](spring/bean/index.md)
+  * [缓存相关]()
+    * [Spring和Ehcache整合详解](spring/cache/ehcache.md)
   * [测试相关]()
     * [test测试常用注解](spring/test/index.md)
   * [xml配置文件]()
