@@ -80,6 +80,7 @@
     * [JSF、facelets](spring/jsf/jsf.md)
     * [JSF 2.0标签](spring/jsf/tags.md)
     * [集成JSF与Spring](spring/jsf/jsf_spring.md)
+    * [集成seam与Spring](spring/jsf/seam_spring.md)
   * [EL表达式](spring/el.md)
   * [jdbcTemplate](spring/jdbcTemplate.md)
   * [schedule定时任务](spring/schedule.md)
