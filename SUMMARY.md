@@ -78,6 +78,7 @@
     * [API框架-Swagger](spring/framework/swagger.md)
   * [JSF]()
     * [JSF、facelets](spring/jsf/jsf.md)
+    * [JSF 2.0标签](spring/jsf/tags.md)
   * [EL表达式](spring/el.md)
   * [jdbcTemplate](spring/jdbcTemplate.md)
   * [schedule定时任务](spring/schedule.md)
