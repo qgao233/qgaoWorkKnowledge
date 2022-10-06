@@ -1,0 +1,1495 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>nio的Path,File · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="files.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    大数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../bigData/">
+            
+                <a href="../../bigData/">
+            
+                    
+                    scala的Seq与java的List相互转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    oracle
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../db/oracle/">
+            
+                <a href="../../db/oracle/">
+            
+                    
+                    oracle处理表的字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../git/cherry.html">
+            
+                <a href="../../git/cherry.html">
+            
+                    
+                    git cherry-pick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../git/merge.html">
+            
+                <a href="../../git/merge.html">
+            
+                    
+                    git合并多次提交为1次
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    idea
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../idea/build.html">
+            
+                <a href="../../idea/build.html">
+            
+                    
+                    idea等ide的build区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../idea/compare.html">
+            
+                <a href="../../idea/compare.html">
+            
+                    
+                    IDEA 比较两个文件差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../idea/git.html">
+            
+                <a href="../../idea/git.html">
+            
+                    
+                    idea的git标签中的符号含义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../feature/stream.html">
+            
+                <a href="../feature/stream.html">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../feature/var.html">
+            
+                <a href="../feature/var.html">
+            
+                    
+                    var
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    io
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../io/dataIO.html">
+            
+                <a href="../io/dataIO.html">
+            
+                    
+                    DataOutputStream和DataInputStream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../io/rename.md.md">
+            
+                <span>
+            
+                    
+                    File.renameTo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    jvm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../jvm/available.html">
+            
+                <a href="../jvm/available.html">
+            
+                    
+                    Runtime.availableProcessors()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    nio
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="files.html">
+            
+                <a href="files.html">
+            
+                    
+                    Files.lines使用注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4.2" data-path="path.html">
+            
+                <a href="path.html">
+            
+                    
+                    nio的Path,File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" >
+            
+                <span>
+            
+                    
+                    第三方
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.1" data-path="../plugin/string.html">
+            
+                <a href="../plugin/string.html">
+            
+                    
+                    StringSubstitutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" >
+            
+                <span>
+            
+                    
+                    StringBuffer
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.6.1" data-path="../stringBuffer/clear.html">
+            
+                <a href="../stringBuffer/clear.html">
+            
+                    
+                    StringBuffer清空操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.7.1" data-path="../test/assert.html">
+            
+                <a href="../test/assert.html">
+            
+                    
+                    assert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.2" data-path="../test/mockito.html">
+            
+                <a href="../test/mockito.html">
+            
+                    
+                    mockito
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" >
+            
+                <span>
+            
+                    
+                    线程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.8.1" data-path="../thread/executorService.html">
+            
+                <a href="../thread/executorService.html">
+            
+                    
+                    ExecutorService API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../annotation.html">
+            
+                <a href="../annotation.html">
+            
+                    
+                    注解继承(扩展限定)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../parquet.html">
+            
+                <a href="../parquet.html">
+            
+                    
+                    Apache Parquet设计解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../reflect.html">
+            
+                <a href="../reflect.html">
+            
+                    
+                    反射中get和getDeclared的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../script.html">
+            
+                <a href="../script.html">
+            
+                    
+                    java里执行第三方脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../transform.html">
+            
+                <a href="../transform.html">
+            
+                    
+                    CsvToBeanBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../urlConn.md.md">
+            
+                <span>
+            
+                    
+                    HttpURLConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../linux/cp.html">
+            
+                <a href="../../linux/cp.html">
+            
+                    
+                    cp -p
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../linux/less.html">
+            
+                <a href="../../linux/less.html">
+            
+                    
+                    linux -- less
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    maven
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../maven/lifeCycle.html">
+            
+                <a href="../../maven/lifeCycle.html">
+            
+                    
+                    生命周期和寻找依赖流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../network/ssl.html">
+            
+                <a href="../../network/ssl.html">
+            
+                    
+                    TLS-v1.2与SSL-v3.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                    注解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../spring/annotation/import.html">
+            
+                <a href="../../spring/annotation/import.html">
+            
+                    
+                    spring @Import
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                    Spring Batch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../../spring/batch/">
+            
+                <a href="../../spring/batch/">
+            
+                    
+                    spring batch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../../spring/batch/fileItemReader.html">
+            
+                <a href="../../spring/batch/fileItemReader.html">
+            
+                    
+                    FlatFileItemReader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" >
+            
+                <span>
+            
+                    
+                    bean相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../../spring/bean/beanManage.html">
+            
+                <a href="../../spring/bean/beanManage.html">
+            
+                    
+                    子类与父类的bean管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.2" data-path="../../spring/bean/field.html">
+            
+                <a href="../../spring/bean/field.html">
+            
+                    
+                    spring通过配置与注解给字段赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" data-path="../../spring/bean/">
+            
+                <a href="../../spring/bean/">
+            
+                    
+                    spring中单例bean引用原型bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.4.1" data-path="../../spring/test/">
+            
+                <a href="../../spring/test/">
+            
+                    
+                    test测试常用注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" >
+            
+                <span>
+            
+                    
+                    xml配置文件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.5.1" data-path="../../spring/xml/p.html">
+            
+                <a href="../../spring/xml/p.html">
+            
+                    
+                    xml bean的property的简写——p命令空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../spring/el.html">
+            
+                <a href="../../spring/el.html">
+            
+                    
+                    EL表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../spring/jdbcTemplate.html">
+            
+                <a href="../../spring/jdbcTemplate.html">
+            
+                    
+                    jdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../spring/schedule.html">
+            
+                <a href="../../spring/schedule.html">
+            
+                    
+                    schedule定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >nio的Path,File</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; qgao 2021-* all right reserved, powered by <a href="https://github.com/aleen42" target="_blank">aleen42</a></span></div><ul>
+<li><div><a href="#31-&#x8DEF;&#x5F84;">3.1 &#x8DEF;&#x5F84;</a><i></i></div></li>
+<li><div><a href="#32-api">3.2 api</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#321-paths">3.2.1 Paths</a><i></i></div></li>
+<li><div><a href="#322-path">3.2.2 Path</a><i></i></div></li>
+<li><div><a href="#323-files">3.2.3 Files</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#33-nio&#x548C;io&#x904D;&#x5386;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x6548;&#x679C;&#x5BF9;&#x6BD4;">3.3 NIO&#x548C;IO&#x904D;&#x5386;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x6548;&#x679C;&#x5BF9;&#x6BD4;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="nio&#x7684;pathfile">nio&#x7684;Path,File</h1>
+<p>2022-4-19 15:1:24</p>
+<blockquote>
+<p>java7&#x63D0;&#x4F9B;</p>
+</blockquote>
+<p>&#x5728;&#x5F88;&#x591A;&#x65B9;&#x9762;&#xFF0C;java.<strong>nio</strong>.file.Path&#x63A5;&#x53E3;&#x548C;java.<strong>io</strong>.File&#x6709;&#x76F8;&#x4F3C;&#x6027;&#xFF0C;&#x4F46;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x7EC6;&#x5FAE;&#x7684;&#x5DEE;&#x522B;&#x3002;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;Path&#x6765;&#x4EE3;&#x66FF;File&#x7C7B;&#x3002;</p>
+<h3 id="31-&#x8DEF;&#x5F84;">3.1 &#x8DEF;&#x5F84;</h3>
+<p><strong>windows&#x4E0B;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</strong></p>
+<pre><code>Path path = Paths.get(&quot;c:\\data\\myfile.txt&quot;); //1
+Path path = Paths.get(&quot;/home/jakobjenkov/myfile.txt&quot;);//2. &#x4F1A;&#x88AB;&#x89E3;&#x6790;&#x6210;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF1A;base&#x4E3A;C&#x76D8;&#xFF0C;&#x4ECE;&#x800C;&#x5BF9;&#x5E94;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x662F;&#xFF1A;C:/home/jakobjenkov/myfile.txt
+</code></pre><p><strong>linux&#x4E0B;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</strong></p>
+<pre><code>Path path = Paths.get(&quot;/home/jakobjenkov/myfile.txt&quot;);
+</code></pre><h3 id="32-api">3.2 api</h3>
+<h4 id="321-paths">3.2.1 Paths</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Path get(String,...)</td>
+<td style="text-align:left">&#x83B7;&#x5F97;Path&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-path">3.2.2 Path</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">String toString()</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x8C03;&#x7528; Path &#x5BF9;&#x8C61;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;&#x5F62;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean starts With(String path)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5; path &#x8DEF;&#x5F84;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean ends With(String path)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x4EE5; path &#x8DEF;&#x5F84;&#x7ED3;&#x673F;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isAbsolute()</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path getParento</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;Path&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x6574;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x5305;&#x542B; Path &#x5BF9;&#x8C61;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path getRoot()</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x8C03;&#x7528; Path &#x5BF9;&#x8C61;&#x7684;&#x6839;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path getFileName</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x4E0E;&#x8C03;&#x7528; Path &#x5BF9;&#x8C61;&#x5173;&#x8054;&#x7684;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">int getNameCount()</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;Path &#x6839;&#x76EE;&#x5F55;&#x540E;&#x9762;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path getName (int idx)</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;idx &#x7684;&#x8DEF;&#x5F84;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path toAbsolute Path()</td>
+<td style="text-align:left">&#x4F5C;&#x4E3A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x8FD4;&#x56DE;&#x8C03;&#x7528; Path &#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path resolve(Path p)</td>
+<td style="text-align:left">&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD4;&#x56DE;&#x5408;&#x5E76;&#x540E;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x5E94;&#x7684;Path&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td style="text-align:left">File toFile()</td>
+<td style="text-align:left">&#x5C06;Path&#x8F6C;&#x5316;&#x4E3A;File&#x7C7B;&#x7684;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-files">3.2.3 Files</h4>
+<p><strong>1 &#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Path copy(Path sc, Path dest, CopyOption ...how)</td>
+<td style="text-align:left">&#x6587;&#x4EF6;&#x7684;&#x590D;&#x5236;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path createDirectory(Path path, FileAttribute&lt;?&gt; ...attr)</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path createFile(Path path, FileAttribute&lt;?&gt; ...arr)</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">void delete (Path path)</td>
+<td style="text-align:left">&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6267;&#x884C;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td style="text-align:left">void deletelfExists (Path path)</td>
+<td style="text-align:left">Path&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x6267;&#x884C;&#x5220;&#x9664;</td>
+</tr>
+<tr>
+<td style="text-align:left">Path move(Path src. Path dest. CopyOption...how)</td>
+<td style="text-align:left">&#x5C06;src&#x79FB;&#x52A8;&#x5230;dest &#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">long size(Path path)</td>
+<td style="text-align:left">&#x8FD4;&#x56DE; path &#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2 &#x7528;&#x4E8E;&#x5224;&#x65AD;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">boolean exists(Path path, LinkOption opts)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isDirectory(Path path, LinkOption opts)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isRegularFile(Path path. LinkOption...opts)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isHidden(Path path)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x9690;&#x8587;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isReadable(Path path)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x53EF;&#x8BFB;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean isWritable(Path path)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x53EF;&#x5199;</td>
+</tr>
+<tr>
+<td style="text-align:left">boolean notExists(Path path. LinkOptionu opts)</td>
+<td style="text-align:left">&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x4E0D;&#x5B58;&#x5728;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3 &#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x5185;&#x5BB9;</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SeekableByteChannel newByte Channel(Path path OpenOption...how)</td>
+<td style="text-align:left">&#x83B7;&#x53D6;&#x4E0E;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;how &#x6307;&#x5B9A;&#x6253;&#x5F00;&#x65B9;&#x5F0F;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">DirectoryStream<path></path> newDirectoryStream(Path path)</td>
+<td style="text-align:left">&#x6253;&#x5F00;path&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">InputStream newlnputStream(Path path. OpenOption ... how)</td>
+<td style="text-align:left">&#x83B7;&#x53D6;InputStream&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td style="text-align:left">OutputStream newOutputStream(Path path, OpenOption ... how)</td>
+<td style="text-align:left">&#x83B7;&#x53D6;OutputStream&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4 &#x5176;&#x5B83;</strong></p>
+<p><code>Files.lines()</code></p>
+<p>&#x4EE5;Stream&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x884C;</p>
+<pre><code>/**
+ * &#x4EE5;&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x884C;
+ * &#x8BFB;&#x53D6;&#x7684;&#x7684;&#x5B57;&#x8282;&#x662F;&#x4EE5;UTF-8&#x89E3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x96C6;
+ * 
+ * @param path &#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;
+ * @return Stream&lt;String&gt; &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x884C;&#x7EC4;&#x6210;&#x7684;&#x6D41;
+ * @throws IOException &#x51FA;&#x73B0;IO&#x9519;&#x8BEF;&#x65F6;&#x629B;&#x51FA;&#x8BE5;&#x5F02;&#x5E38;
+ * @throws SecurityException &#x5982;&#x679C;&#x662F;&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;,&#x5219;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x5668;&#x662F;&#x5DF2;&#x5B89;&#x88C5;,&#x68C0;&#x67E5;&#x8BFB;&#x53D6;&#x65B9;&#x6CD5;&#x6765;&#x68C0;&#x67E5;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;&#x8BBF;&#x95EE;
+ */
+public static Stream&lt;String&gt; lines(Path path) throws IOException {}
+
+/**
+ * &#x4EE5;&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x884C;
+ * &#x8BE5;&#x65B9;&#x6CD5;&#x548C;readAllLines&#x4E0D;&#x540C;,&#x4E0D;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x884C;&#x8BFB;&#x53D6;&#x5230;&#x4E00;&#x4E2A;List&#x4E2D;,&#x800C;&#x662F;&#x4EE5;&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x60F0;&#x6027;&#x52A0;&#x8F7D;
+ * &#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x89E3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x8BFB;&#x53D6;&#x5B57;&#x8282;,&#x652F;&#x6301;readAllLines&#x7684;&#x884C;&#x7EC8;&#x6B62;&#x7B26;
+ * &#x5F53;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x65F6;,&#x540E;&#x7EED;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x7684;IOException&#x5C06;&#x4F1A;&#x5728;&#x8BFB;&#x53D6;Stream&#x6D41;&#x7684;&#x65B9;&#x6CD5;&#x5904;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x5305;&#x88C5;&#x7684;UncheckedIOException.
+ * &#x5982;&#x679C;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x53D1;&#x751F;IOException&#x4E5F;&#x4F1A;&#x5305;&#x88C5;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;UncheckedIOException
+ * &#x8FD4;&#x56DE;&#x7684;&#x6D41;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E2A;&#x8BFB;&#x53D6;&#x5668;,&#x5982;&#x679C;&#x9700;&#x8981;&#x5468;&#x671F;&#x6027;&#x7684;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;try-with-resources&#x8BED;&#x53E5;&#x6765;&#x4FDD;&#x8BC1;stream&#x7684;close&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;,&#x4ECE;&#x800C;&#x5173;&#x95ED;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6; 
+ * 
+ * @param path &#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;
+ * @param cs &#x6307;&#x5B9A;&#x7684;&#x89E3;&#x7801;&#x683C;&#x5F0F;
+ * @return Stream&lt;String&gt; &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x884C;&#x7EC4;&#x6210;&#x7684;&#x6D41;
+ * @throws IOException &#x51FA;&#x73B0;IO&#x9519;&#x8BEF;&#x65F6;&#x629B;&#x51FA;&#x8BE5;&#x5F02;&#x5E38;
+ * @throws SecurityException &#x5982;&#x679C;&#x662F;&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;,&#x5219;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x5668;&#x662F;&#x5DF2;&#x5B89;&#x88C5;,&#x68C0;&#x67E5;&#x8BFB;&#x53D6;&#x65B9;&#x6CD5;&#x6765;&#x68C0;&#x67E5;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;&#x8BBF;&#x95EE;
+ */
+public static Stream&lt;String&gt; lines(Path path, Charset cs) throws IOException {}
+</code></pre><h3 id="33-nio&#x548C;io&#x904D;&#x5386;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x6548;&#x679C;&#x5BF9;&#x6BD4;">3.3 NIO&#x548C;IO&#x904D;&#x5386;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x6548;&#x679C;&#x5BF9;&#x6BD4;</h3>
+<p>&#x5229;&#x7528;IO&#x7684;File&#x9012;&#x5F52;&#x904D;&#x5386;&#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code>public static void showPath(String dir){
+    File files = new File(dir);
+    if (files.isDirectory()) {
+        for (File file: files.listFiles()
+             ) {
+            System.out.println(file.getAbsolutePath());
+            showPath(file.getAbsolutePath().toString());
+        }
+    }else{
+        return;
+    }
+}
+</code></pre><p>&#x91C7;&#x7528;NIO&#x7684;Files.walk&#x65B9;&#x6CD5;&#xFF0C;&#x501F;&#x52A9;Stream&#x6D41; &#x76F4;&#x63A5;&#x9010;&#x4E00;&#x628A;&#x76EE;&#x5F55;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code>public static void printDir(String dir){
+    Path path = Paths.get(dir);
+    try {
+        Files.walk(path).forEach(System.out::println);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+</code></pre><blockquote>
+<p>&#x6C7D;&#x8F66;&#x4E3A;&#x4F60;&#x9020;&#x597D;&#x4E86;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x518D;&#x9A91;&#x8F66;&#x4E0A;&#x9AD8;&#x901F;&#x4E86;&#x3002; </p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-08-15 18:12:46
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="files.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Files.lines使用注意事项">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"nio的Path,File","level":"1.6.4.2","depth":3,"next":{"title":"第三方","level":"1.6.5","depth":2,"ref":"","articles":[{"title":"StringSubstitutor","level":"1.6.5.1","depth":3,"path":"java/plugin/string.md","ref":"java/plugin/string.md","articles":[]}]},"previous":{"title":"Files.lines使用注意事项","level":"1.6.4.1","depth":3,"path":"java/nio/files.md","ref":"java/nio/files.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"java/nio/path.md","mtime":"2022-08-15T10:12:46.261Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-15T13:24:51.875Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
