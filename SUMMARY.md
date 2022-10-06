@@ -82,6 +82,7 @@
     * [集成JSF与Spring](spring/jsf/jsf_spring.md)
     * [集成seam与Spring](spring/jsf/seam_spring.md)
     * [faces-config.xml](spring/jsf/facesconfig.md)
+    * [JSF参数传递](spring/jsf/transport.md)
   * [EL表达式](spring/el.md)
   * [jdbcTemplate](spring/jdbcTemplate.md)
   * [schedule定时任务](spring/schedule.md)

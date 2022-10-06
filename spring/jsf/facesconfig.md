@@ -1,5 +1,9 @@
 # faces-config.xml
 
+参考：[faces-config.xml是配置文件](https://qa.1r1g.com/sf/ask/1430851691/)
+
+---
+
 如果未在web.xml或web-fragment.xml中显式映射此配置文件,并且满足以下一个或多个条件,则必须自动映射此配置文件.
 
 * 在WEB-INF中可以找到`faces-config.xml`文件.
