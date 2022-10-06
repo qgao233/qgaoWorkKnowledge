@@ -47,7 +47,7 @@ public class TestBeanAdapter extends TestBean {
 
 ## 2 通过JSF EL Resolver来桥接
 
-只要实现了EL Resolver, 并在faces-config.xml里注册它，那么在JSF里使用EL表达式时，就会自动地调用EL Resolver来寻找这个EL表达式对应的对象等。
+只要实现了EL Resolver, 并在[faces-config.xml](./facesconfig.md)里注册它，那么在JSF里使用EL表达式时，就会自动地调用EL Resolver来寻找这个EL表达式对应的对象等。
 
 seam当然实现了它自己的Resolver，而spring也实了这个Resolver，如果把它们都注册上，那么JSF EL 将变成seam与spring的一座桥梁。用下面代码注册spring EL Resolver:
 

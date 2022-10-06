@@ -34,7 +34,7 @@
 
 ### 1.2 添加DelegatingVariableResolver
 
-**重点**：在`faces-config.xml`中添加`DelegatingVariableResolver`。
+**重点**：在[faces-config.xml](./facesconfig.md)中添加`DelegatingVariableResolver`。
 
 ```
 <application>
