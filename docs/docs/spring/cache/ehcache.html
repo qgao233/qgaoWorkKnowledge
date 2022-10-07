@@ -1,0 +1,1768 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spring和Ehcache整合详解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    大数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../bigData/">
+            
+                <a href="../../bigData/">
+            
+                    
+                    scala的Seq与java的List相互转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    oracle
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../db/oracle/">
+            
+                <a href="../../db/oracle/">
+            
+                    
+                    oracle处理表的字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../git/cherry.html">
+            
+                <a href="../../git/cherry.html">
+            
+                    
+                    git cherry-pick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../git/merge.html">
+            
+                <a href="../../git/merge.html">
+            
+                    
+                    git合并多次提交为1次
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    idea
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../idea/build.html">
+            
+                <a href="../../idea/build.html">
+            
+                    
+                    idea等ide的build区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../idea/compare.html">
+            
+                <a href="../../idea/compare.html">
+            
+                    
+                    IDEA 比较两个文件差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../idea/git.html">
+            
+                <a href="../../idea/git.html">
+            
+                    
+                    idea的git标签中的符号含义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../java/feature/stream.html">
+            
+                <a href="../../java/feature/stream.html">
+            
+                    
+                    stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../java/feature/var.html">
+            
+                <a href="../../java/feature/var.html">
+            
+                    
+                    var
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    io
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../java/io/dataIO.html">
+            
+                <a href="../../java/io/dataIO.html">
+            
+                    
+                    DataOutputStream和DataInputStream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../java/io/rename.md.md">
+            
+                <span>
+            
+                    
+                    File.renameTo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    jvm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../java/jvm/available.html">
+            
+                <a href="../../java/jvm/available.html">
+            
+                    
+                    Runtime.availableProcessors()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    nio
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../../java/nio/files.html">
+            
+                <a href="../../java/nio/files.html">
+            
+                    
+                    Files.lines使用注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="../../java/nio/path.html">
+            
+                <a href="../../java/nio/path.html">
+            
+                    
+                    nio的Path,File
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" >
+            
+                <span>
+            
+                    
+                    第三方
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.1" data-path="../../java/plugin/string.html">
+            
+                <a href="../../java/plugin/string.html">
+            
+                    
+                    StringSubstitutor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.6.1" data-path="../../java/dataStructure/clear.html">
+            
+                <a href="../../java/dataStructure/clear.html">
+            
+                    
+                    StringBuffer清空操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6.2" data-path="../../java/dataStructure/remove.html">
+            
+                <a href="../../java/dataStructure/remove.html">
+            
+                    
+                    ArrayList在for循环移除元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.7.1" data-path="../../java/test/assert.html">
+            
+                <a href="../../java/test/assert.html">
+            
+                    
+                    assert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.2" data-path="../../java/test/mockito.html">
+            
+                <a href="../../java/test/mockito.html">
+            
+                    
+                    mockito
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" >
+            
+                <span>
+            
+                    
+                    线程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.8.1" data-path="../../java/thread/executorService.html">
+            
+                <a href="../../java/thread/executorService.html">
+            
+                    
+                    ExecutorService API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" >
+            
+                <span>
+            
+                    
+                    tomcat
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.9.1" data-path="../../java/tomcat/war.html">
+            
+                <a href="../../java/tomcat/war.html">
+            
+                    
+                    tomcat部署war包注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../java/annotation.html">
+            
+                <a href="../../java/annotation.html">
+            
+                    
+                    注解继承(扩展限定)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../java/parquet.html">
+            
+                <a href="../../java/parquet.html">
+            
+                    
+                    Apache Parquet设计解读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../java/reflect.html">
+            
+                <a href="../../java/reflect.html">
+            
+                    
+                    反射中get和getDeclared的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../../java/script.html">
+            
+                <a href="../../java/script.html">
+            
+                    
+                    java里执行第三方脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../../java/transform.html">
+            
+                <a href="../../java/transform.html">
+            
+                    
+                    CsvToBeanBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../../java/urlConn.md.md">
+            
+                <span>
+            
+                    
+                    HttpURLConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../../java/jndi.html">
+            
+                <a href="../../java/jndi.html">
+            
+                    
+                    JNDI粗略了解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../linux/cp.html">
+            
+                <a href="../../linux/cp.html">
+            
+                    
+                    cp -p
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../linux/less.html">
+            
+                <a href="../../linux/less.html">
+            
+                    
+                    linux -- less
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    maven
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../maven/lifeCycle.html">
+            
+                <a href="../../maven/lifeCycle.html">
+            
+                    
+                    生命周期和寻找依赖流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../maven/repository.html">
+            
+                <a href="../../maven/repository.html">
+            
+                    
+                    多仓库配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../maven/distribution.html">
+            
+                <a href="../../maven/distribution.html">
+            
+                    
+                    mvn deploy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../maven/installfile.html">
+            
+                <a href="../../maven/installfile.html">
+            
+                    
+                    安装jar包到本地仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    network
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../network/ssl.html">
+            
+                <a href="../../network/ssl.html">
+            
+                    
+                    TLS-v1.2与SSL-v3.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    web service
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../../network/webService/soap.html">
+            
+                <a href="../../network/webService/soap.html">
+            
+                    
+                    SOAP与WSDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                    注解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../annotation/import.html">
+            
+                <a href="../annotation/import.html">
+            
+                    
+                    spring @Import
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../annotation/annotation.html">
+            
+                <a href="../annotation/annotation.html">
+            
+                    
+                    aop 中使用@annotation寻找切入点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                    Spring Batch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../batch/">
+            
+                <a href="../batch/">
+            
+                    
+                    spring batch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../batch/fileItemReader.html">
+            
+                <a href="../batch/fileItemReader.html">
+            
+                    
+                    FlatFileItemReader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" >
+            
+                <span>
+            
+                    
+                    bean相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../bean/beanManage.html">
+            
+                <a href="../bean/beanManage.html">
+            
+                    
+                    子类与父类的bean管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.2" data-path="../bean/field.html">
+            
+                <a href="../bean/field.html">
+            
+                    
+                    spring通过配置与注解给字段赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" data-path="../bean/">
+            
+                <a href="../bean/">
+            
+                    
+                    spring中单例bean引用原型bean
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" >
+            
+                <span>
+            
+                    
+                    缓存相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.10.4.1" data-path="ehcache.html">
+            
+                <a href="ehcache.html">
+            
+                    
+                    Spring和Ehcache整合详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.5.1" data-path="../test/">
+            
+                <a href="../test/">
+            
+                    
+                    test测试常用注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" >
+            
+                <span>
+            
+                    
+                    xml配置文件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.6.1" data-path="../xml/p.html">
+            
+                <a href="../xml/p.html">
+            
+                    
+                    xml bean的property的简写——p命令空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" >
+            
+                <span>
+            
+                    
+                    框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.7.1" data-path="../framework/swagger.html">
+            
+                <a href="../framework/swagger.html">
+            
+                    
+                    API框架-Swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" >
+            
+                <span>
+            
+                    
+                    JSF
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.8.1" data-path="../jsf/jsf.html">
+            
+                <a href="../jsf/jsf.html">
+            
+                    
+                    JSF、facelets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.2" data-path="../jsf/tags.html">
+            
+                <a href="../jsf/tags.html">
+            
+                    
+                    JSF 2.0标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.3" data-path="../jsf/jsf_spring.html">
+            
+                <a href="../jsf/jsf_spring.html">
+            
+                    
+                    集成JSF与Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.4" data-path="../jsf/seam_spring.html">
+            
+                <a href="../jsf/seam_spring.html">
+            
+                    
+                    集成seam与Spring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.5" data-path="../jsf/facesconfig.html">
+            
+                <a href="../jsf/facesconfig.html">
+            
+                    
+                    faces-config.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8.6" data-path="../jsf/transport.html">
+            
+                <a href="../jsf/transport.html">
+            
+                    
+                    JSF参数传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../el.html">
+            
+                <a href="../el.html">
+            
+                    
+                    EL表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../jdbcTemplate.html">
+            
+                <a href="../jdbcTemplate.html">
+            
+                    
+                    jdbcTemplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../schedule.html">
+            
+                <a href="../schedule.html">
+            
+                    
+                    schedule定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../introspector.html">
+            
+                <a href="../introspector.html">
+            
+                    
+                    使用内省导致内存泄露
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    windows
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../windows/adArea.html">
+            
+                <a href="../../windows/adArea.html">
+            
+                    
+                    LDAP和AD域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../python/base.html">
+            
+                <a href="../../python/base.html">
+            
+                    
+                    __name__=='__main__'
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../python/type.html">
+            
+                <a href="../../python/type.html">
+            
+                    
+                    Python 类型提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Spring和Ehcache整合详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; qgao 2021-* all right reserved, powered by <a href="https://github.com/aleen42" target="_blank">aleen42</a></span></div><ul>
+<li><div><a href="#1-&#x642D;&#x5EFA;&#x73AF;&#x5883;">1 &#x642D;&#x5EFA;&#x73AF;&#x5883;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#11-pom&#x4F9D;&#x8D56;">1.1 pom&#x4F9D;&#x8D56;</a><i></i></div></li>
+<li><div><a href="#12-xml&#x914D;&#x7F6E;">1.2 xml&#x914D;&#x7F6E;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2-&#x4E1A;&#x52A1;&#x4EE3;&#x7801;">2 &#x4E1A;&#x52A1;&#x4EE3;&#x7801;</a><i></i></div></li>
+<li><div><a href="#3-&#x6CE8;&#x610F;&#x4E8B;&#x9879;">3 &#x6CE8;&#x610F;&#x4E8B;&#x9879;</a><i></i></div></li>
+<li><div><a href="#4-&#x6D4B;&#x8BD5;">4 &#x6D4B;&#x8BD5;</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="spring&#x548C;ehcache&#x6574;&#x5408;&#x8BE6;&#x89E3;">Spring&#x548C;Ehcache&#x6574;&#x5408;&#x8BE6;&#x89E3;</h1>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://blog.csdn.net/feiyangtianyao/article/details/90692021" target="_blank">Spring&#x548C;Ehcache&#x6574;&#x5408;&#x8BE6;&#x89E3;</a></p>
+<hr>
+<p>Spring &#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x7F13;&#x5B58;&#x529F;&#x80FD;&#x7684;&#x62BD;&#x8C61;&#xFF1A;&#x672C;&#x8EAB;&#x4E0D;&#x76F4;&#x63A5;&#x63D0;&#x4F9B;&#x7F13;&#x5B58;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x5141;&#x8BB8;&#x7ED1;&#x5B9A;&#x4E0D;&#x540C;&#x7684;&#x7F13;&#x5B58;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF08;&#x5982;Ehcache&#xFF09;&#xFF0C;spring&#x652F;&#x6301;&#x6CE8;&#x89E3;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF0C;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;</p>
+<ul>
+<li>Ehcache&#x662F;&#x4E00;&#x4E2A;&#x7EAF;Java&#x7684;&#x8FDB;&#x7A0B;&#x5185;&#x7F13;&#x5B58;&#x6846;&#x67B6;&#xFF0C;&#x5177;&#x6709;&#x5FEB;&#x901F;&#x3001;&#x7CBE;&#x5E72;&#x7B49;&#x7279;&#x70B9;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x672C;&#x5730;&#x7684;&#x5185;&#x5B58;&#x505A;&#x7F13;&#x5B58;&#xFF0C;</li>
+<li>redis&#x5219;&#x662F;&#x90E8;&#x7F72;&#x5728;&#x53E6;&#x4E00;&#x4E2A;server&#x7684;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#xFF0C;</li>
+</ul>
+<blockquote>
+<p>&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x7528;redis + ehcache&#x505A;&#x4E24;&#x7EA7;&#x7F13;&#x5B58;&#x3002;</p>
+</blockquote>
+<h2 id="1-&#x642D;&#x5EFA;&#x73AF;&#x5883;">1 &#x642D;&#x5EFA;&#x73AF;&#x5883;</h2>
+<h3 id="11-pom&#x4F9D;&#x8D56;">1.1 pom&#x4F9D;&#x8D56;</h3>
+<pre><code>&lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- ehcache &#x76F8;&#x5173;&#x4F9D;&#x8D56; --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;net.sf.ehcache&lt;/groupId&gt;
+            &lt;artifactId&gt;ehcache&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;cn.pomit&lt;/groupId&gt;
+            &lt;artifactId&gt;Mybatis&lt;/artifactId&gt;
+            &lt;version&gt;${project.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+</code></pre><p>&#x5177;&#x4F53;&#x7248;&#x672C;&#x770B;&#x81EA;&#x5DF1;&#x3002;</p>
+<h3 id="12-xml&#x914D;&#x7F6E;">1.2 xml&#x914D;&#x7F6E;</h3>
+<p>spring-ehcache.xml</p>
+<pre><code>&lt;context:annotation-config /&gt;
+    &lt;context:component-scan base-package=&quot;cn.pomit.springwork&quot;&gt;
+&lt;/context:component-scan&gt;
+
+&lt;!-- &#x58F0;&#x660E;&#x4E86;EhCacheManagerFactoryBean&#x7684;bean&#xFF0C;&#x8BFB;&#x53D6;ehcache.xml&#x7684;&#x914D;&#x7F6E;&#x3002;
+ehcache.xml&#x662F;&#x7528;&#x6765;&#x914D;&#x7F6E;&#x7F13;&#x5B58;&#x7684;&#x540D;&#x5B57;&#x3002;&#x53EA;&#x6709;&#x914D;&#x7F6E;&#x7684;&#x540D;&#x5B57;&#x624D;&#x53EF;&#x4EE5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x88AB;&#x4F7F;&#x7528;&#x3002; --&gt;
+&lt;bean id=&quot;ehcache&quot;
+    class=&quot;org.springframework.cache.ehcache.EhCacheManagerFactoryBean&quot;&gt;
+    &lt;property name=&quot;configLocation&quot; value=&quot;classpath:ehcache/ehcache.xml&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;cacheManager&quot; class=&quot;org.springframework.cache.ehcache.EhCacheCacheManager&quot;&gt;
+    &lt;property name=&quot;cacheManager&quot; ref=&quot;ehcache&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;cache:annotation-driven cache-manager=&quot;cacheManager&quot; /&gt;
+
+&lt;bean id=&quot;cacheService&quot; class=&quot;cn.pomit.springwork.ehcache.service.CacheService&quot;&gt;
+    &lt;property name=&quot;userInfoService&quot; ref=&quot;userInfoService&quot; /&gt;
+&lt;/bean&gt;
+</code></pre><p>ehcache.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ehcache xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:noNamespaceSchemaLocation=&quot;http://ehcache.org/ehcache.xsd&quot;&gt;
+
+  &lt;!-- &#x78C1;&#x76D8;&#x7F13;&#x5B58;&#x4F4D;&#x7F6E; --&gt;
+  &lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;
+
+  &lt;!-- &#x9ED8;&#x8BA4;&#x7F13;&#x5B58; --&gt;
+  &lt;defaultCache
+          maxEntriesLocalHeap=&quot;10000&quot;
+          eternal=&quot;false&quot;
+          timeToIdleSeconds=&quot;120&quot;
+          timeToLiveSeconds=&quot;120&quot;
+          maxEntriesLocalDisk=&quot;10000000&quot;
+          diskExpiryThreadIntervalSeconds=&quot;120&quot;
+          memoryStoreEvictionPolicy=&quot;LRU&quot;/&gt;
+
+  &lt;!-- userCache&#x7F13;&#x5B58; --&gt;
+  &lt;cache name=&quot;userCache&quot;
+         maxElementsInMemory=&quot;1000&quot;
+         eternal=&quot;false&quot;
+         timeToIdleSeconds=&quot;0&quot;
+         timeToLiveSeconds=&quot;1000&quot;
+         overflowToDisk=&quot;false&quot;
+         memoryStoreEvictionPolicy=&quot;LRU&quot;/&gt;
+&lt;/ehcache&gt;
+</code></pre><h2 id="2-&#x4E1A;&#x52A1;&#x4EE3;&#x7801;">2 &#x4E1A;&#x52A1;&#x4EE3;&#x7801;</h2>
+<p>CacheService.java</p>
+<pre><code>import org.springframework.cache.annotation.Cacheable;
+
+import cn.pomit.springwork.mybatis.domain.UserInfo;
+import cn.pomit.springwork.mybatis.service.UserInfoService;
+
+public class CacheService {
+    UserInfoService userInfoService;
+
+    @Cacheable(value = &quot;userCache&quot;, key = &quot;#root.targetClass.simpleName+&apos;-&apos;+#root.methodName+&apos;-&apos;+#userName&quot;)
+    public UserInfo getUserInfoByUserName(String userName) {
+        return userInfoService.getUserInfoByUserName(userName);
+    }
+
+    public UserInfoService getUserInfoService() {
+        return userInfoService;
+    }
+
+    public void setUserInfoService(UserInfoService userInfoService) {
+        this.userInfoService = userInfoService;
+    }
+
+}
+</code></pre><h2 id="3-&#x6CE8;&#x610F;&#x4E8B;&#x9879;">3 &#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<p>CacheService&#x5728;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x7528;@Service&#x4F5C;&#x6CE8;&#x89E3;&#xFF0C;&#x800C;&#x662F;&#x653E;&#x5728;xml&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;bean&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;@Service&#x6CE8;&#x89E3;&#x4E0D;&#x80FD;&#x88AB;&#x52A8;&#x6001;&#x4EE3;&#x7406;&#xFF0C;&#x5BFC;&#x81F4;&#x7F13;&#x5B58;&#x65E0;&#x6548;&#xFF0C;&#x7ECF;&#x8FC7;&#x591A;&#x6B21;&#x5B9E;&#x9A8C;&#xFF0C;&#x653E;&#x5728;xml&#x91CC;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x4EE3;&#x7406;&#x5230;&#xFF0C;&#x5E76;&#x4F7F;&#x7F13;&#x5B58;&#x751F;&#x6548;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#x662F;&#xFF1A;</p>
+<ul>
+<li>Springmvc&#x548C;Spring&#x914D;&#x7F6E;&#x7684;&#x626B;&#x63CF;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x5206;&#x79BB;&#x5F00;&#x6765;&#xFF0C;&#x91CD;&#x590D;&#x626B;&#x63CF;&#x5BFC;&#x81F4;&#x4E86;Spring&#x626B;&#x63CF;&#x8FC7;&#x7A0B;&#x4F7F;&#x7528;&#x4E86;&#x4EE3;&#x7406;&#xFF0C;&#x4F46;&#x662F;Springmvc&#x8FC7;&#x7A0B;&#x628A;&#x8FD9;&#x4E2A;bean&#x4ECE;spring&#x7A97;&#x53E3;&#x4E2D;&#x79FB;&#x53BB;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;Springmvc&#x4F7F;&#x7528;context:include-filter&#x914D;&#x7F6E;&#x4E86;&#x53EA;&#x626B;&#x63CF;Controller&#x548C;RestController&#x6CE8;&#x89E3;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p><a href="https://www.pomit.cn/p/181499739820288" target="_blank">&#x300A;Spring&#x548C;Spring Mvc 5&#x6574;&#x5408;&#x8BE6;&#x89E3;&#x300B;</a>&#x8FD9;&#x7BC7;&#x5DF2;&#x7ECF;&#x4FEE;&#x6B63;&#x4E86;Springmvc&#x7684;&#x914D;&#x7F6E;</p>
+<h2 id="4-&#x6D4B;&#x8BD5;">4 &#x6D4B;&#x8BD5;</h2>
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import cn.pomit.springwork.ehcache.service.CacheService;
+import cn.pomit.springwork.mybatis.domain.UserInfo;
+
+@RestController
+@RequestMapping(&quot;/ehcache&quot;)
+public class EhcacheRest {
+
+    @Autowired
+    private CacheService cacheService;
+
+    @RequestMapping(value = &quot;/test/{name}&quot;, method = { RequestMethod.GET })
+    public UserInfo test(@PathVariable(&quot;name&quot;) String name) {
+        return cacheService.getUserInfoByUserName(name);
+    }
+
+}
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-10-06 16:51:33
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spring和Ehcache整合详解","level":"1.10.4.1","depth":3,"next":{"title":"测试相关","level":"1.10.5","depth":2,"ref":"","articles":[{"title":"test测试常用注解","level":"1.10.5.1","depth":3,"path":"spring/test/index.md","ref":"spring/test/index.md","articles":[]}]},"previous":{"title":"缓存相关","level":"1.10.4","depth":2,"ref":"","articles":[{"title":"Spring和Ehcache整合详解","level":"1.10.4.1","depth":3,"path":"spring/cache/ehcache.md","ref":"spring/cache/ehcache.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"spring/cache/ehcache.md","mtime":"2022-10-06T08:51:33.205Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-06T13:58:46.888Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

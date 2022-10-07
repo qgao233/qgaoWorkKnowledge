@@ -32,7 +32,7 @@
 
 1. Maven 将从本地资源库获得 Maven 的本地资源库依赖资源(默认用户目录下的.m2目录)，如果没有找到，
 2. 它会从默认的 Maven 中央存储库 – http://repo1.maven.org/maven2/ 查找下载，如果还是没有找到，
-3. 它会从配置的远程存储库（包括私服、JBOSS仓库和java.net仓库）查找下载。
+3. 它会从[配置](./repository.md)的远程存储库（包括私服、JBOSS仓库和java.net仓库）查找下载。
 
 ### 1.3 idea里的maven wrapper
 
