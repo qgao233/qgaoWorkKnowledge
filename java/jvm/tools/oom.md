@@ -24,6 +24,8 @@ GC清理的这么点内存很快会再次填满, 迫使GC再次执行. 这样就
 
 堆内存完全用光，年轻代和老年代使用率全部99%。
 
+![](media/1.png)
+
 ## 3 解决办法
 
 ### 3.1 自慰式
@@ -94,3 +96,5 @@ http://www.eclipse.org/mat/
 #### 3 JPROFILER——收费，可以试用10天
 
 下载地址：https://www.ej-technologies.com/download/jprofiler/files
+
+#### 4 Visual VM
