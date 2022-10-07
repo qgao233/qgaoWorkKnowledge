@@ -95,3 +95,4 @@
 * [orm]()
   * [hibernate]()
     * [Hibernate之二级缓存](orm/hibernate/cache.md)
+    * [Hibernate之load/get](orm/hibernate/load.md)
